@@ -3,7 +3,7 @@ import { Router } from "express";
 const UserRoutes = () => {
   const routes = Router();
 
-  routes.get("/list/users");
+  routes.get("/list/users")
   routes.get("/list/users/:id");
 
   routes.post("/create/user");
@@ -11,6 +11,8 @@ const UserRoutes = () => {
   routes.put("/update/user/:id");
 
   routes.delete("/delete/user/:id");
+
+  return routes;
 }
 
-export default UserRoutes;
+export default UserRoutes();
