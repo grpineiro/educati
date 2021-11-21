@@ -136,26 +136,29 @@
     height: 30px;
 }
 
+#cadastro-eye {
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
 #cadastro button {
+    position: absolute;
     background-color: #C6F5FF;
     color: black;
     font-weight: 750;
-    height: 40px;
-    border-radius: 12px;
+    font-size: 22px;
     border: none;
-    font-size: 18px;
+    border-radius: 12px;
     outline-width: 0;
-    margin: 3px;
+    width: 140px;
+    height: 50px;
+    bottom: 20px;
+    right: 60px;
 }
 
 #cadastro button:hover {
     background-color: #DFDFDF;
     color: #3F3F3F;
-    cursor: pointer;
-}
-
-#cadastro-eye {
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
 }
