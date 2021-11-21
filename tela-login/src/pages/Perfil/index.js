@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
+
 import token_1 from './_img/token_1.png'
 import edit from './_img/camera_azul.png'
 import './App.css';
@@ -36,9 +37,11 @@ function App() {
           </ul>
        </div>
        <div className="Option_Quit">
-        <ul id="Opt_ul_Quit">
+        <Link to="/">
+          <ul id="Opt_ul_Quit">
             <li id="Opt_li_Quit"><a className="Opt_a_Quit" href="#">Sair</a></li>
           </ul>
+        </Link>
        </div>
     </nav>
     { /* Fim da Área Navbar */} 
