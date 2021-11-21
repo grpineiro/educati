@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './login.css'
 
@@ -10,7 +11,6 @@ import sun from './images/sun.png'
 import cloud1 from './images/cloud.png'
 import cloud2 from './images/cloud.png'
 import about from './images/info.png'
-import { Link } from 'react-router-dom'
 
 function Login() {
     const [email, setEmail] = useState("")
@@ -74,7 +74,7 @@ function Login() {
                 </div>
 
                 <button type='submit' className='btn btn-outline-light'>Entrar</button>
-                <button type='submit' className='btn btn-outline-light'>Registrar</button>
+                <button type='submit' className='btn btn-outline-light' id='cadastrar'>Cadastrar</button>
                 <button type='submit' className='btn btn-outline-light'>Convidado</button>
             </form>
 
