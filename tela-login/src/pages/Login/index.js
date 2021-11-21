@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './login.css'
 
 import { MdEmail } from 'react-icons/md'
 import { RiLockPasswordFill } from 'react-icons/ri'
-import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
+import { IoEyeOutline, IoEyeOffOutline } from 'react-icons/io5';
 
 import sun from './images/sun.png'
 import cloud1 from './images/cloud.png'
@@ -21,37 +22,37 @@ function Login() {
     }
 
     return (
-        <div className='login'>
+        <div className='text-center' id='login'>
             <div className='forSun'>
-                <img src={sun} className='sun' alt="Sun" />
+                <img src={sun} id='sun' alt='Sun' />
             </div>
             <div className='forCloud1'>
-                <img src={cloud1} className='cloud1' alt="Cloud" />
+                <img src={cloud1} id='cloud1' alt='Cloud' />
             </div>
             <div className='forCloud2'>
-                <img src={cloud2} className='cloud2' alt="Cloud" />
+                <img src={cloud2} id='cloud2' alt='Cloud' />
             </div>
 
-            <h1 className='MainTitle'>EducaTI</h1>
+            <h1 id='MainTitle'>EducaTI</h1>
 
-            <div className='accessAccount'>
-                <div className='inputEmail'>
+            <form>
+                <div class='mb-3' id='inputEmail'>
                     <MdEmail />
                     <input
-                        type='text'
+                        type='email'
                         placeholder='Endereço de e-mail'
-                        required
+                        class='form-control'
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                     />
                 </div>
 
-                <div className='inputPassword'>
+                <div class='mb-3' id='inputPassword'>
                     <RiLockPasswordFill />
                     <input
-                        type={show ? "text" : "password"}
+                        type={show ? 'text' : 'password'}
                         placeholder='Senha'
-                        required
+                        class='form-control'
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                     />
@@ -71,13 +72,13 @@ function Login() {
                     </div>
                 </div>
 
-                <button type='submit'>Entrar</button>
-                <button type='submit'>Registrar</button>
-                <button type='submit'>Convidado</button>
-            </div>
+                <button type='submit' className='btn btn-outline-light'>Entrar</button>
+                <button type='submit' className='btn btn-outline-light'>Registrar</button>
+                <button type='submit' className='btn btn-outline-light'>Convidado</button>
+            </form>
 
             <div className='forAbout'>
-                <img src={about} className='about' alt="About" />
+                <img src={about} className='about' alt='About' />
             </div>
         </div>
     )
