@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
-.login {
+* {
     background-color: #8BE3FF;
+}
+
+.login {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 100%;
-    background-color: #8BE3FF;
     color: black;
 }
 
