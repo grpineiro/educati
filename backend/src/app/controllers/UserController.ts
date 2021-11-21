@@ -91,7 +91,7 @@ export default class UserController {
       email,
       birth,
       password
-    }, (err: Error, user: User) => {
+    }, (err: any, user: any) => {
       if (err)
         res.sendStatus(400).json(err);
 
@@ -102,7 +102,7 @@ export default class UserController {
   public async deleteUser(req: Request, res: Response) {
     const { id } = req.params;
 
-    UserEntity.findByIdAndDelete(id, (err: Error, user: User) => {
+    UserEntity.findByIdAndDelete(id).exec((err, user) => {
       if (err)
         res.sendStatus(400).json(err);
 
