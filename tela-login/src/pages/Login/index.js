@@ -74,7 +74,7 @@ function Login() {
                 </div>
 
                 <button type='submit' className='btn btn-outline-light'>Entrar</button>
-                <button type='submit' className='btn btn-outline-light' id='cadastrar'>Cadastrar</button>
+                <Link to="/cadastrar"><button type='submit' className='btn btn-outline-light' id='cadastrar'>Cadastrar</button></Link>
                 <button type='submit' className='btn btn-outline-light'>Convidado</button>
             </form>
 
