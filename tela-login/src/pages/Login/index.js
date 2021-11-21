@@ -1,18 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './login.css'
 
 import { MdEmail } from 'react-icons/md'
 import { RiLockPasswordFill } from 'react-icons/ri'
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
 import sun from './images/sun.png'
 import cloud1 from './images/cloud.png'
 import cloud2 from './images/cloud.png'
 import about from './images/info.png'
 
-const Login = () => {
+function Login() {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [show, setShow] = useState(false)
+
+    const handleClick = (evt) => {
+        evt.preventDefault()
+        setShow(!show);
+    }
+
     return (
         <div className='login'>
-            {/* Images */}
             <div className='forSun'>
                 <img src={sun} className='sun' alt="Sun" />
             </div>
@@ -28,12 +37,38 @@ const Login = () => {
             <div className='accessAccount'>
                 <div className='inputEmail'>
                     <MdEmail />
-                    <input type='text' placeholder='Endereço de e-mail' required />
+                    <input
+                        type='text'
+                        placeholder='Endereço de e-mail'
+                        required
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                    />
                 </div>
 
                 <div className='inputPassword'>
                     <RiLockPasswordFill />
-                    <input type='password' placeholder='Senha' required />
+                    <input
+                        type={show ? "text" : "password"}
+                        placeholder='Senha'
+                        required
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
+                    />
+
+                    <div className='login-eye'>
+                        {show ? (
+                            <IoEyeOutline
+                                size={20}
+                                onClick={handleClick}
+                            />
+                        ) : (
+                            <IoEyeOffOutline
+                                size={20}
+                                onClick={handleClick}
+                            />
+                        )}
+                    </div>
                 </div>
 
                 <button type='submit'>Entrar</button>

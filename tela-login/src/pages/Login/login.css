@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
-* {
-    margin: 0;
-    background-color: #8BE3FF;
-    color: black;
-}
-
 .login {
     background-color: #8BE3FF;
     display: flex;
@@ -13,6 +7,8 @@
     justify-content: center;
     height: 100vh;
     width: 100%;
+    background-color: #8BE3FF;
+    color: black;
 }
 
 .sun {
@@ -20,7 +16,7 @@
     width: 429px;
     height: 396px;
     top: -272px;
-    left: 1349px;
+    left: 1405px;
 }
 
 .cloud1 {
@@ -46,11 +42,12 @@
     color: white;
     top: -284px;
     right: 358px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .accessAccount {
     position: relative;
-    right: 693px;
+    right: 755px;
 }
 
 .about {
@@ -58,7 +55,7 @@
     width: 30px;
     height: 30px;
     top: 418px;
-    left: 100px;
+    left: 40px;
 }
 
 .inputEmail {
@@ -82,6 +79,7 @@
     font-size: 20px;
     margin-left: 10px;
     margin-right: 10px;
+    height: 30px;
 }
 
 .inputPassword {
@@ -101,7 +99,8 @@
     border: none;
     font-size: 20px;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: -25px;
+    height: 30px;
 }
 
 .login button {
@@ -112,13 +111,19 @@
     border-radius: 5px;
     border: none;
     font-size: 18px;
-    margin-top: 5px;
     outline-width: 0;
     margin: 3px;
 }
 
 .login button:hover {
-    background-color: #D4D4D4;
-    color: white;
+    background-color: #DFDFDF;
+    color: #3F3F3F;
+    cursor: pointer;
+}
+
+.login-eye {
+    align-items: center;
+    justify-content: center;
+    font-size: 30;
     cursor: pointer;
 }
