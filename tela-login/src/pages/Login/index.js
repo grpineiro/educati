@@ -10,6 +10,7 @@ import sun from './images/sun.png'
 import cloud1 from './images/cloud.png'
 import cloud2 from './images/cloud.png'
 import about from './images/info.png'
+import { Link } from 'react-router-dom'
 
 function Login() {
     const [email, setEmail] = useState("")
@@ -78,7 +79,7 @@ function Login() {
             </form>
 
             <div className='forAbout'>
-                <img src={about} className='about' alt='About' />
+                <Link to="/sobre"><img src={about} className='about' alt='About' /></Link>
             </div>
         </div>
     )
