@@ -1,48 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
-Body { 
-  background-color: #8BE3FF;
-}
 
-.Sobre {
+.sobre {
   text-align: center;
   margin: auto;
+  background-color: #8BE3FF;
 }
 
 .Img_Sun_Sobre {
   position: absolute;
-  right: -12.811em;
-  top: 10em;
-  max-width: 100%;
-  margin: 0 auto;
-  overflow:hidden;
-  transform: translate(-50%,-50%);
+  bottom: 440px;
+  right: 0px;
 }
 
 .Img_Cloud_Sobre {
   position: absolute;
-  right: 30em;
-  top: 10em;
-  display: flex;
-  margin: 0 28em 0 28em;
-  max-width: 100%;
-  overflow: hidden;
-  transform:translate(-50%,-50%);
+  left: 250px;
+  top: 75px;
 }
 
 .Img_Cloud_Sobre_2 {
   position: absolute;
-  left: 47em;
-  top: 32em;
-  display: flex;
-  margin: 0 28em 0 28em;
-  max-width: 100%;
-  overflow: hidden;
-  transform:translate(-50%,-50%);
+  right: 290px;
+  bottom: 170px;
 }
 
 .Content_area_Sobre {
-  margin: 3em 5em 11.62em 5em;
+  margin: 150px 10px 50px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,26 +35,32 @@ Body {
 
 .sobreTitle {
   font-family: 'Lilita One', cursive;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 5em;
   color: #ffffff;
 }
 
 div.Area_About_Us_Sobre {
-  max-width: 50em;
-  max-height: 15em;
+  width: 690px;
+  height: 300px;
+  max-width: 70em;
+  max-height: 50em;
+  margin-bottom: 22px;
 }
 
 .About_Us_Sobre {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 1.6em; /*AQUI ARRUMAR TAMANHO*/
+  font-size: 22px; 
   text-align: justify;
 }
 
 .Footer_Sobre {
+  margin: 0px;
   text-align: center;
+  padding-bottom: 1px;
   background-color: #ffffff;
-  height: 7.71em;
+
 }
 
 button {
@@ -99,3 +89,49 @@ button {
   font-family: 'Lilita One', cursive;
   font-size: 5em;
 }
+
+/*
+@media only screen and (min-width : 320px) {
+
+  .sobre {
+    text-align: center;
+    margin: 180px;
+    background-color: #8BE3FF;
+  }
+
+
+  .Img_Sun_Sobre {
+    position: absolute;
+    top: 0px;
+    left: 455.6px;
+  }
+
+  .Img_Cloud_Sobre {
+    display: none;
+  }
+  
+  .Img_Cloud_Sobre_2 {
+    display: none;
+  }
+  
+  .Content_area_Sobre {
+    margin: 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sobreTitle {
+    font-family: 'Lilita One', cursive;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 5em;
+    color: #ffffff;
+  }
+  
+  div.Area_About_Us_Sobre {
+    width: 700px;
+    height: 300px;
+    margin-bottom: 100px;
+  }
+  
+}*/
