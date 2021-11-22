@@ -53,7 +53,7 @@ export default class UserController {
     });
   }
 
-  public async getUser(req: Request, res: Response) {
+  public async getUserById(req: Request, res: Response) {
     const { id } = req.params;
 
     UserEntity.findById(id, (err: Error, user: User) => {
@@ -63,11 +63,24 @@ export default class UserController {
       res.json(user);
     });
   }
-  
+  public async getUserByEmail(req: Request, res: Response) {
+    const email: any = req.query.email;
+
+    UserEntity.findOne({ email }, (err: Error, user: User) => {
+      if (err)
+        return res.status(400).json(err);
+
+      if (!user)
+        return res.status(400).json({ "message": "Usuário não encontrado" });
+
+      res.json(user);
+    })
+  }
+
   public async updateUser(req: Request, res: Response) {
     const { id } = req.params;
     const { first_name, last_name, email, birth, password } = req.body;
-    
+
     const msgObg = { "message": "Campo Obrigatorio" };
 
     if (!first_name)
@@ -114,7 +127,7 @@ export default class UserController {
       if (err)
         return res.status(400).json(err);
 
-      res.json({user, "message": "Usuario deletado"});
+      res.json({ user, "message": "Usuario deletado" });
     });
   }
 

@@ -6,7 +6,8 @@ const UserRoutes = () => {
   const routes = Router();
 
   routes.get("/list/users", userController.getUsers);
-  routes.get("/list/user/:id", userController.getUser);
+  routes.get("/list/user/:id", userController.getUserById);
+  routes.get("/list/user/", userController.getUserByEmail);
 
   routes.post("/create/user", userController.createUser);
 
