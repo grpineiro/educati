@@ -1,13 +1,7 @@
-// Create a user controller with the following methods: getUser, getUsers, createUser, updateUser, deleteUser and loginUser
-
-import { randomUUID } from "crypto";
 import { Request, Response } from "express";
-import mongoose, { QueryOptions } from "mongoose";
 import UserEntity, { User } from "../entities/User";
 
 export default class UserController {
-
-  
 
   public async createUser(req: Request, res: Response) {
     const { first_name, last_name, email, birth, password } = req.body;
