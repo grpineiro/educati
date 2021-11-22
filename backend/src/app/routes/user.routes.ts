@@ -1,16 +1,18 @@
 import { Router } from "express";
+import UserController from "../controllers/UserController";
 
 const UserRoutes = () => {
+  const userController = new UserController();
   const routes = Router();
 
-  routes.get("/list/users")
-  routes.get("/list/users/:id");
+  routes.get("/list/users", userController.getUsers);
+  routes.get("/list/user/:id", userController.getUser);
 
-  routes.post("/create/user");
+  routes.post("/create/user", userController.createUser);
 
-  routes.put("/update/user/:id");
+  routes.put("/update/user/:id", userController.updateUser);
 
-  routes.delete("/delete/user/:id");
+  routes.delete("/delete/user/:id", userController.deleteUser);
 
   return routes;
 }
