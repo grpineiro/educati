@@ -1,10 +1,10 @@
 import { Routes, Route, useRoutes } from "react-router-dom"
 
 import Login from "./Login"
-import Cadastro from "./Cadastro/cadastro"
-import Sobre from "./Sobre/sobre"
-import Perfil from "./Perfil/perfil"
-import Home from "./Home/home"
+import Cadastro from "./Cadastro"
+import Sobre from "./Sobre"
+import Perfil from "./Perfil"
+import Home from "./Home"
 
 const Rotas = () => {
   // const routes = useRoutes([
