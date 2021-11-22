@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './cadastro.css'
 
-import arrow from './images/arrow.png'
+import arrow from '../../images/arrow.png'
 
 function Cadastro() {
     return (
@@ -14,11 +14,11 @@ function Cadastro() {
                 <form>
                     <div className="row g-3 justify-content-center" id='itensFormCadastro'>
                         <div className="col-7">
-                            <input type="text" className="form-control-cadastro-cadastro" id="nomeCadastro" placeholder="Nome" required />
+                            <input type="text" className="form-control-cadastro" id="nomeCadastro" placeholder="Nome" required />
                         </div>
 
                         <div className="col-7">
-                            <input type="text" className="form-control-cadastro-cadastro" id="sobrenomeCadastro" placeholder="Sobrenome" required />
+                            <input type="text" className="form-control-cadastro" id="sobrenomeCadastro" placeholder="Sobrenome" required />
                         </div>
 
                         <div className="col-7">
