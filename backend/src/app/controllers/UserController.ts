@@ -9,26 +9,26 @@ export default class UserController {
     const msgObg = { "message": "Campo Obrigatorio" };
 
     if (!first_name)
-      res.sendStatus(422).json(msgObg);
+      return res.status(422).json(msgObg);
 
     if (!last_name)
-      res.sendStatus(422).json(msgObg);
+      return res.status(422).json(msgObg);
 
     if (!email)
-      res.sendStatus(422).json(msgObg);
+      return res.status(422).json(msgObg);
 
     if (!birth)
-      res.sendStatus(422).json(msgObg);
+      return res.status(422).json(msgObg);
 
-    if (!password)
-      res.sendStatus(422).json(msgObg);
+    if (!password || password.length === "")
+      return res.status(400).json(msgObg);
 
     async function userExists(email: string) {
       return await UserEntity.findOne({ email }).exec();
     }
 
     if (await userExists(email)) {
-      return res.sendStatus(503).json({ "message": "Usuário já existe" });
+      return res.status(503).json({ "message": "Usuário já existe" });
     }
 
     const user = new UserEntity({
@@ -47,7 +47,7 @@ export default class UserController {
   public getUsers(req: Request, res: Response) {
     UserEntity.find({}, (err, users) => {
       if (err)
-        res.sendStatus(400).json(err);
+        return res.status(400).json(err);
 
       res.json(users);
     });
@@ -58,7 +58,7 @@ export default class UserController {
 
     UserEntity.findById(id, (err: Error, user: User) => {
       if (err)
-        res.sendStatus(400).json(err);
+        return res.status(400).json(err);
 
       res.json(user);
     });
@@ -71,19 +71,27 @@ export default class UserController {
     const msgObg = { "message": "Campo Obrigatorio" };
 
     if (!first_name)
-      res.sendStatus(422).json(msgObg);
+      return res.status(422).json(msgObg);
 
     if (!last_name)
-      res.sendStatus(422).json(msgObg);
+      return res.status(422).json(msgObg);
 
     if (!email)
-      res.sendStatus(422).json(msgObg);
+      return res.status(422).json(msgObg);
 
     if (!birth)
-      res.sendStatus(422).json(msgObg);
+      return res.status(422).json(msgObg);
 
     if (!password)
-      res.sendStatus(422).json(msgObg);
+      return res.status(422).json(msgObg);
+
+    async function emailExists(email: string) {
+      return await UserEntity.findOne({ email }).exec();
+    }
+
+    if (await emailExists(email)) {
+      return res.status(503).json({ "message": "Email já existe" });
+    }
 
     UserEntity.findByIdAndUpdate(id, {
       first_name,
@@ -93,7 +101,7 @@ export default class UserController {
       password
     }, (err: any, user: any) => {
       if (err)
-        res.sendStatus(400).json(err);
+        return res.status(400).json(err);
 
       res.json(user);
     });
@@ -104,7 +112,7 @@ export default class UserController {
 
     UserEntity.findByIdAndDelete(id).exec((err, user) => {
       if (err)
-        res.sendStatus(400).json(err);
+        return res.status(400).json(err);
 
       res.json({user, "message": "Usuario deletado"});
     });
@@ -114,20 +122,20 @@ export default class UserController {
     const { email, password } = req.body;
 
     if (!email)
-      res.sendStatus(422).json({ "message": "Campo Obrigatorio" });
+      return res.status(422).json({ "message": "Campo Obrigatorio" });
 
     if (!password)
-      res.sendStatus(422).json({ "message": "Campo Obrigatorio" });
+      return res.status(422).json({ "message": "Campo Obrigatorio" });
 
     UserEntity.findOne({ email }, (err: Error, user: User) => {
       if (err)
-        res.sendStatus(400).json(err);
+        return res.status(400).json(err);
 
       if (!user)
-        res.sendStatus(400).json({ "message": "Usuário não encontrado" });
+        return res.status(400).json({ "message": "Usuário não encontrado" });
 
       if (user.password !== password)
-        res.sendStatus(400).json({ "message": "Senha incorreta" });
+        return res.status(400).json({ "message": "Senha incorreta" });
 
       res.json(user);
     });
