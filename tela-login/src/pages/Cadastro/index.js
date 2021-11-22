@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './cadastro.css'
@@ -10,7 +10,6 @@ import { UserContext } from '../../contexts/user.context';
 
 function Cadastro() {
   const [{ values }, handleChange, handleSubmit] = useForm();
-  const [userEmail, setUserEmail] = useState();
   const { user, setUser } = useContext(UserContext);
 
   function submitBody() {
@@ -29,10 +28,6 @@ function Cadastro() {
     })
       .then(response => response.json())
       .then(data => data.message ? alert(data.message) : (setUser({ ...data })));
-  }
-
-  function toContext() {
-    fetch("http://localhost:3333/list/user/")
   }
 
   return (
