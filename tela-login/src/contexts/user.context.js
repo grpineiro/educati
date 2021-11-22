@@ -7,7 +7,8 @@ export default function UserContextProvider({ children }) {
   const [user, setUser] = useState(null);
 
   const state = {
-    
+    user,
+    setUser
   };
 
   return <UserContext.Provider value={state}>{children}</UserContext.Provider>;
