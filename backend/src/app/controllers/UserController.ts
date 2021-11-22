@@ -7,9 +7,11 @@ import UserEntity, { User } from "../entities/User";
 
 export default class UserController {
 
-  public create(req: Request, res: Response) {
+  
+
+  public async createUser(req: Request, res: Response) {
     const { first_name, last_name, email, birth, password } = req.body;
-    
+
     const msgObg = { "message": "Campo Obrigatorio" };
 
     if (!first_name)
@@ -27,6 +29,14 @@ export default class UserController {
     if (!password)
       res.sendStatus(422).json(msgObg);
 
+    async function userExists(email: string) {
+      return await UserEntity.findOne({ email }).exec();
+    }
+
+    if (await userExists(email)) {
+      return res.sendStatus(503).json({ "message": "Usuário já existe" });
+    }
+
     const user = new UserEntity({
       first_name,
       last_name,
@@ -35,14 +45,10 @@ export default class UserController {
       password
     });
 
-    user.save((err, user) => {
-      if (err)
-        res.sendStatus(400).json(err);
-
-      res.json(user);
-    });
-
+    await user.save();
+    return res.send(user);
   }
+
 
   public getUsers(req: Request, res: Response) {
     UserEntity.find({}, (err, users) => {
@@ -106,7 +112,7 @@ export default class UserController {
       if (err)
         res.sendStatus(400).json(err);
 
-      res.json(user);
+      res.json({user, "message": "Usuario deletado"});
     });
   }
 
