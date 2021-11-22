@@ -7,10 +7,10 @@ import { MdEmail } from 'react-icons/md'
 import { RiLockPasswordFill } from 'react-icons/ri'
 import { IoEyeOutline, IoEyeOffOutline } from 'react-icons/io5';
 
-import sunLogin from './images/sun.png'
-import cloudLogin1 from './images/cloud.png'
-import cloudLogin2 from './images/cloud.png'
-import aboutLogin from './images/info.png'
+import sunLogin from '../../images/sun.png'
+import cloudLogin1 from '../../images/cloud.png'
+import cloudLogin2 from '../../images/cloud.png'
+import aboutLogin from '../../images/info.png'
 
 function Login() {
     const [email, setEmail] = useState("")
