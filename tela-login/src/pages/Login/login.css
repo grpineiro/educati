@@ -90,8 +90,8 @@
     }
 }
 
- /* Small Devices, Tablets */
- @media only screen and (min-width : 768px) {
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
     /* Icons */
     #sun {
         width: 310px;
@@ -151,7 +151,6 @@
     /* Title */
     #MainTitle {
         font-size: 110px;
-        top: 110px;
     }
 }
 
@@ -185,7 +184,6 @@
     /* Title */
     #MainTitle {
         font-size: 140px;
-        top: 110px;
     }
 }
 
@@ -212,13 +210,11 @@
     }
     
     .about {
-        bottom: 30px;
         right: 50px;
     }
 
     /* Title */
     #MainTitle {
-        font-size: 140px;
         top: 120px;
     }
 }
