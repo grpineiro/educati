@@ -4,7 +4,6 @@
 /* Tentei seguir uma padrão seguindo o ritmo do código, ou seja, 
 para ir acompanhando o css, basta ler os o código de cima para baixo*/
 
-
 .Corpo {
   text-align: center;
   margin: auto;
@@ -26,7 +25,7 @@ div#Area_Imagem {
   width: 50px;
 }
 
-.Img_Perfil {
+.Img_Do_Perfil {
   margin: 3px 5px;
   width: 150px;
   height: 150px;
@@ -63,45 +62,63 @@ nav#Barra_navegacao ul#Opt_ul_Navegacao {
   width: 450px;
 }
 
-li#Opcao_li_Home, li#Opcao_li_Perfil {
+nav#Barra_navegacao li {
   position: relative;
   height: 11px;
   width: 200px;
   right: 32px;
 }
 
+li#Opcao_li_Home, li#Opcao_li_Perfil {
+  font-size: 25px;
+  line-height: 6;
+  text-align: center;
+  margin: 1px;
+}
+
 .Opcao_a_Home, .Opcao_a_Perfil, .Opcao_a_Saida {
+  display: inline-block;
   text-decoration: none;
   outline: none;
   color: #000000;
 }
 
+.Opcao_a_Home {
+  width: 168px;
+  height: 156px;
+}
+
+.Opcao_a_Perfil {
+  width: 163px;
+  height: 156px;
+}
+
 .Opcao_a_Home, .Opcao_a_Perfil {
-  display: block;
-  width: 195px;
-  height: 100%;
+  font-size: 25px;
   line-height: 6;
   text-align: center;
-  font-size: 25px;
+  margin: 1px;
 }
 
 li#Opcao_li_Home {
-  background-color: rgba(177, 177, 177, 0.7);
-  border: 3px solid #000000;
+  background-color: rgba(196, 196, 196, 0.5);
+  border-bottom: 3px solid #000000;
+  border-left: 3px solid #000000;
+  border-right: 3px solid #000000;
 }
 
 .Opcao_li_Home:hover {
-  background-color: rgba(177, 177, 177, 0.7);
+  background-color: rgba(196, 196, 196, 0.3);
   color: #000000;
 }
 
 li#Opt_li_Perfil {
   background-color: rgba(196, 196, 196, 0.089);
+  border-bottom: 2px solid #000000;
 }
 
 .Opcao_li_Perfil:hover {
   background-color: rgba(196, 196, 196, 0.3);
-  color: #000000;
 }
 
 .Opcao_li_Perfil:active {
@@ -112,30 +129,30 @@ li#Opt_li_Perfil {
 
 .Opcao_Saida {
   display: flex;
-  width: 17.1%;
-  height: 10.2px;
-  margin: 1px;
+  width: 230px;
+  height: 160px;
+  margin: auto;
 }
 
 ul#Opcao_ul_Saida {
-padding-left: 23px;
-margin-left: 25px;
+  padding-left: 0px;
+  width: 1px;
+}
+
+#Opcao_li_Saida {
+  width: 1px;
 }
 
 .Opcao_a_Saida {
-  line-height: 6.5;
+  line-height: 5;
   text-align: center;
+  padding-bottom: 2px;
   font-size: 30px;
-  width: 230px;
-  height: 195px;
+  width: 211px;
+  height: 160px;
   background-color: #8be4ff;
   border: 2px solid #000000;
 }
-
-a.Opcao_a_Saida:hover {
-    background-color: #8be4ff;
-    color: #000000;
-  }
 
 a.Opcao_a_Saida:active {
   background-color:rgba(253, 5, 5, 0.651);
@@ -152,12 +169,15 @@ a.Opcao_a_Saida:active {
 
   /* Início área info perfil*/
 .Area_Perfil {
-  flex-flow: nowrap;
   display: flex;
+  margin: 40px 5px 0px 5px;
   background-color: #ffffff;
-  width: 100%;
-  height: 100%;
+  width: 1485px;
+  height: 564px;
   border-top: 2px solid black;
-  border-radius: 5px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   box-shadow: 0px -15px 25px rgba(0, 0, 0, .4);
 }

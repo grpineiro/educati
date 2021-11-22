@@ -23,7 +23,7 @@ function Home() {
        <nav id="Barra_navegacao">
          <div className="Div_Resumo_Perfil">
             <div id="Area_Imagem">
-               <img src={token_1} className="Img_Perfil" alt="Imagem perfil"/>
+               <img src={token_1} className="Img_Do_Perfil" alt="Imagem perfil"/>
             </div>
             <div className="Div_Nome_Estrelas">
               <p id="Nome">Jorginho</p>
