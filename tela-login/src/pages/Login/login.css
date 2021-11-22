@@ -13,7 +13,7 @@
     }
 
     /* Icons */
-    #sun {
+    #sunLogin {
         position: absolute;
         width: 129px;
         height: 96px;
@@ -21,7 +21,7 @@
         right: 0px;
     }
 
-    #cloud1 {
+    #cloudLogin1 {
         position: absolute;
         width: 85px;
         height: 50px;
@@ -29,7 +29,7 @@
         left: 10px;
     }
     
-    #cloud2 {
+    #cloudLogin2 {
         position: absolute;
         width: 85px;
         height: 50px;
@@ -37,7 +37,7 @@
         right: 5px;
     }
 
-    .about {
+    .aboutLogin {
         position: absolute;
         width: 25px;
         height: 25px;
@@ -46,7 +46,7 @@
     }
 
     /* Title */
-    #MainTitle {
+    #loginTitle {
         position: absolute;
         font-family: 'Lilita One';
         font-size: 60px;
@@ -59,32 +59,32 @@
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
     /* Icons */
-    #sun {
+    #sunLogin {
         width: 229px;
         height: 206px;
     }
     
-    #cloud1 {
+    #cloudLogin1 {
         width: 145px;
         height: 95px;
         top: 30px;
         left: 15px;
     }
     
-    #cloud2 {
+    #cloudLogin2 {
         width: 145px;
         height: 95px;
         top: 210px;
         right: 15px;
     }
     
-    .about {
+    .aboutLogin {
         bottom: 15px;
         right: 20px;
     }
 
     /* Title */
-    #MainTitle {
+    #loginTitle {
         font-size: 70px;
         top: 130px;
     }
@@ -93,26 +93,26 @@
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
     /* Icons */
-    #sun {
+    #sunLogin {
         width: 310px;
         height: 265px;
     }
     
-    #cloud1 {
+    #cloudLogin1 {
         width: 195px;
         height: 125px;
         top: 25px;
         left: 25px;
     }
     
-    #cloud2 {
+    #cloudLogin2 {
         width: 195px;
         height: 125px;
         top: 210px;
         right: 20px;
     }
 
-    .about {
+    .aboutLogin {
         width: 30px;
         height: 30px;
         bottom: 30px;
@@ -120,7 +120,7 @@
     }
 
     /* Title */
-    #MainTitle {
+    #loginTitle {
         font-size: 100px;
         top: 110px;
     }
@@ -129,19 +129,19 @@
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
     /* Icons */
-    #sun {
+    #sunLogin {
         width: 300px;
         height: 245px;
     }
     
-    #cloud1 {
+    #cloudLogin1 {
         width: 225px;
         height: 135px;
         top: 25px;
         left: 25px;
     }
     
-    #cloud2 {
+    #cloudLogin2 {
         width: 225px;
         height: 135px;
         top: 210px;
@@ -149,7 +149,7 @@
     }
 
     /* Title */
-    #MainTitle {
+    #loginTitle {
         font-size: 110px;
     }
 }
@@ -157,32 +157,32 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
     /* Icons */    
-    #sun {
+    #sunLogin {
         width: 389px;
         height: 346px;
     }
     
-    #cloud1 {
+    #cloudLogin1 {
         width: 245px;
         height: 145px;
         top: 22px;
         left: 150px;
     }
     
-    #cloud2 {
+    #cloudLogin2 {
         width: 245px;
         height: 145px;
         top: 230px;
         right: 150px;
     }
     
-    .about {
+    .aboutLogin {
         bottom: 30px;
         right: 60px;
     }
     
     /* Title */
-    #MainTitle {
+    #loginTitle {
         font-size: 140px;
     }
 }
@@ -190,46 +190,46 @@
 /* Other Devices - Full HD, 4K */
 @media only screen and (min-width : 1800px) {
     /* Icons */    
-    #sun {
+    #sunLogin {
         width: 439px;
         height: 396px;
     }
     
-    #cloud1 {
+    #cloudLogin1 {
         width: 245px;
         height: 145px;
         top: 22px;
         left: 280px;
     }
     
-    #cloud2 {
+    #cloudLogin2 {
         width: 245px;
         height: 145px;
         top: 230px;
         right: 290px;
     }
     
-    .about {
+    .aboutLogin {
         right: 50px;
     }
 
     /* Title */
-    #MainTitle {
+    #loginTitle {
         top: 120px;
     }
 }
 
 /* General Items */
-#inputEmail {
+#inputEmailLogin {
     display: flex;
     align-items: center;
 }
 
-#inputEmail svg {
+#inputEmailLogin svg {
     font-size: 40px;
 }
 
-#inputEmail input {
+#inputEmailLogin input {
     background-color: #C6F5FF;
     outline-width: 0;
     border: none;
@@ -238,16 +238,16 @@
     height: 30px;
 }
 
-#inputPassword {
+#inputPasswordLogin {
     display: flex;
     align-items: center;
 }
 
-#inputPassword svg {
+#inputPasswordLogin svg {
     font-size: 40px;
 }
 
-#inputPassword input {
+#inputPasswordLogin input {
     background-color: #C6F5FF;
     outline-width: 0;
     border: none;

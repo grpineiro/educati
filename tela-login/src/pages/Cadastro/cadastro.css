@@ -13,7 +13,7 @@
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
     /* Title */
-    #MainTitle {
+    #cadastroTitle {
         position: absolute;
         font-family: 'Lilita One';
         font-size: 70px;
@@ -23,7 +23,7 @@
     }
 
     /* Form */
-    #nome {
+    #nomeCadastro {
         font-weight: 750;
         font-size: 18px;
         outline-width: 0;
@@ -32,7 +32,7 @@
         margin-bottom: 5px;
     }
 
-    #sobrenome {
+    #sobrenomeCadastro {
         font-weight: 750;
         font-size: 18px;
         outline-width: 0;
@@ -41,7 +41,7 @@
         margin-bottom: 5px;
     }
 
-    #email {
+    #emailCadastro {
         font-weight: 750;
         font-size: 18px;
         outline-width: 0;
@@ -50,7 +50,7 @@
         margin-bottom: 5px;
     }
 
-    #password {
+    #passwordCadastro {
         font-weight: 750;
         font-size: 18px;
         outline-width: 0;
@@ -59,7 +59,7 @@
         margin-bottom: 5px;
     }
 
-    #confirmPassword {
+    #confirmPasswordCadastro {
         font-weight: 750;
         font-size: 18px;
         outline-width: 0;
@@ -68,7 +68,7 @@
         margin-bottom: 5px;
     }
 
-    #birthday {
+    #birthdayCadastro {
         font-weight: 750;
         font-size: 18px;
         outline-width: 0;
@@ -94,7 +94,7 @@
     }
 
     /* Icon */
-    .arrow {
+    .arrowCadastro {
         position: absolute;
         width: 48px;
         height: 28px;
@@ -105,39 +105,39 @@
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
-       /* Title */
-       #MainTitle {
+    /* Title */
+    #cadastroTitle {
         font-size: 90px;
         top: 40px;
     }
 
     /* Form */
-    #nome {
+    #nomeCadastro {
         font-size: 20px;
         margin-bottom: 15px;
     }
 
-    #sobrenome {
+    #sobrenomeCadastro {
         font-size: 20px;
         margin-bottom: 15px;
     }
 
-    #email {
+    #emailCadastro {
         font-size: 20px;
         margin-bottom: 15px;
     }
 
-    #password {
+    #passwordCadastro {
         font-size: 20px;
         margin-bottom: 15px;
     }
 
-    #confirmPassword {
+    #confirmPasswordCadastro {
         font-size: 20px;
         margin-bottom: 15px;
     }
 
-    #birthday {
+    #birthdayCadastro {
         font-size: 20px;
     }
 
@@ -149,7 +149,7 @@
     }
 
     /* Icon */
-    .arrow {
+    .arrowCadastro {
         width: 60px;
         height: 40px;
         bottom: 50px;
@@ -160,32 +160,32 @@
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
     /* Form */
-    #nome {
+    #nomeCadastro {
         font-size: 22px;
         margin-bottom: 20px;
     }
 
-    #sobrenome {
+    #sobrenomeCadastro {
         font-size: 22px;
         margin-bottom: 20px;
     }
 
-    #email {
+    #emailCadastro {
         font-size: 22px;
         margin-bottom: 20px;
     }
 
-    #password {
+    #passwordCadastro {
         font-size: 22px;
         margin-bottom: 20px;
     }
 
-    #confirmPassword {
+    #confirmPasswordCadastro {
         font-size: 22px;
         margin-bottom: 20px;
     }
 
-    #birthday {
+    #birthdayCadastro {
         font-size: 22px;
         margin-bottom: 100px;
     }
@@ -197,7 +197,7 @@
     }
 
     /* Icon */
-    .arrow {
+    .arrowCadastro {
         width: 80px;
         height: 40px;
         bottom: 40px;
@@ -208,32 +208,32 @@
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
     /* Title */
-    #MainTitle {
+    #cadastroTitle {
         font-size: 100px;
     }
 
     /* Form */
-    #nome {
+    #nomeCadastro {
         margin-bottom: 30px;
     }
 
-    #sobrenome {
+    #sobrenomeCadastro {
         margin-bottom: 30px;
     }
 
-    #email {
+    #emailCadastro {
         margin-bottom: 30px;
     }
 
-    #password {
+    #passwordCadastro {
         margin-bottom: 30px;
     }
 
-    #confirmPassword {
+    #confirmPasswordCadastro {
         margin-bottom: 30px;
     }
 
-    #birthday {
+    #birthdayCadastro {
         margin-bottom: 100px;
     }
 
@@ -244,7 +244,7 @@
     }
 
     /* Icon */
-    .arrow {
+    .arrowCadastro {
         bottom: 40px;
         left: 60px;
     }
@@ -253,7 +253,7 @@
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
     /* Form */
-    #birthday {
+    #birthdayCadastro {
         margin-bottom: 90px;
     }
 
@@ -266,7 +266,7 @@
     }
 
     /* Icon */
-    .arrow {
+    .arrowCadastro {
         width: 90px;
         height: 50px;
         bottom: 40px;
@@ -283,7 +283,7 @@
     }
 
     /* Icon */
-    .arrow {
+    .arrowCadastro {
         bottom: 30px;
         left: 60px;
     }

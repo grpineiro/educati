@@ -7,10 +7,10 @@ import { MdEmail } from 'react-icons/md'
 import { RiLockPasswordFill } from 'react-icons/ri'
 import { IoEyeOutline, IoEyeOffOutline } from 'react-icons/io5';
 
-import sun from './images/sun.png'
-import cloud1 from './images/cloud.png'
-import cloud2 from './images/cloud.png'
-import about from './images/info.png'
+import sunLogin from './images/sun.png'
+import cloudLogin1 from './images/cloud.png'
+import cloudLogin2 from './images/cloud.png'
+import aboutLogin from './images/info.png'
 
 function Login() {
     const [email, setEmail] = useState("")
@@ -24,36 +24,36 @@ function Login() {
 
     return (
         <div className='text-center' id='login'>
-            <div className='forSun'>
-                <img src={sun} id='sun' alt='Sun' />
+            <div className='forSunLogin'>
+                <img src={sunLogin} id='sunLogin' alt='Sun' />
             </div>
-            <div className='forCloud1'>
-                <img src={cloud1} id='cloud1' alt='Cloud' />
+            <div className='forCloudLogin1'>
+                <img src={cloudLogin1} id='cloudLogin1' alt='Cloud' />
             </div>
-            <div className='forCloud2'>
-                <img src={cloud2} id='cloud2' alt='Cloud' />
+            <div className='forCloudLogin2'>
+                <img src={cloudLogin2} id='cloudLogin2' alt='Cloud' />
             </div>
 
-            <h1 id='MainTitle'>EducaTI</h1>
+            <h1 id='loginTitle'>EducaTI</h1>
 
             <form>
-                <div class='mb-3' id='inputEmail'>
+                <div class='mb-3' id='inputEmailLogin'>
                     <MdEmail />
                     <input
                         type='email'
                         placeholder='Endereço de e-mail'
-                        class='form-control'
+                        class='form-control-login'
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                     />
                 </div>
 
-                <div class='mb-3' id='inputPassword'>
+                <div class='mb-3' id='inputPasswordLogin'>
                     <RiLockPasswordFill />
                     <input
                         type={show ? 'text' : 'password'}
                         placeholder='Senha'
-                        class='form-control'
+                        class='form-control-login'
                         value={password}
                         onChange={e => setPassword(e.target.value)}
                     />
@@ -79,7 +79,7 @@ function Login() {
             </form>
 
             <div className='forAbout'>
-                <Link to="/sobre"><img src={about} className='about' alt='About' /></Link>
+                <Link to="/sobre"><img src={aboutLogin} className='aboutLogin' alt='About' /></Link>
             </div>
         </div>
     )
