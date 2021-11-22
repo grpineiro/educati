@@ -1,9 +1,10 @@
 import { Routes, Route, useRoutes } from "react-router-dom"
 
 import Login from "./Login"
-import Cadastro from "./Cadastro"
-import Sobre from "./Sobre"
-import Perfil from "./Perfil"
+import Cadastro from "./Cadastro/index"
+import Sobre from "./Sobre/Sobre"
+import Perfil from "./Perfil/Perfil"
+import Home from "./Home/Home"
 
 const Rotas = () => {
   // const routes = useRoutes([
@@ -16,7 +17,8 @@ const Rotas = () => {
     <Routes>
       <Route index path="/" element={<Login />} />
       <Route path="/cadastrar" element={<Cadastro />} />
-      <Route path="/sobre" element={< Sobre />} />
+      <Route path="/sobre" element={<Sobre />} />
+      <Route path="/home" element={<Home />} />
       <Route path="/perfil" element={<Perfil />} />
     </Routes>
   )

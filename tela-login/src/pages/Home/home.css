@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lilita+One&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lilita+One&display=swap');
+
+/* Tentei seguir uma padrão seguindo o ritmo do código, ou seja, 
+para ir acompanhando o css, basta ler os o código de cima para baixo*/
+
+
+.Corpo {
+  text-align: center;
+  margin: auto;
+  background-color: #8be4ff;
+}
+
+nav#Barra_navegacao {
+  background-color: #ffffff;
+  height: 179px;
+  width: 100%;
+  display: inline-flex;
+}
+
+.Div_Resumo_Perfil {
+  width: 300px;
+}
+
+div#Area_Imagem {
+  width: 50px;
+}
+
+.Img_Perfil {
+  margin: 3px 5px;
+  width: 150px;
+  height: 150px;
+}
+
+.Div_Nome_Estrelas {
+  margin: 15px 0 0 40px;
+  padding-top: 14px;
+  text-align: center;
+}
+
+p, a {
+  font-family: 'Lobster', cursive;
+}
+
+p#Nome {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+p#Total_Estrelas {
+  font-size: 20px;
+}
+
+.Opcoes_Navegacao {
+  margin-right: 1px;
+  width: 1000px;
+  border-left: 2px solid #000000;
+}
+
+nav#Barra_navegacao ul#Opt_ul_Navegacao {
+  display: flex;
+  list-style: none; 
+  width: 450px;
+}
+
+li#Opcao_li_Home, li#Opcao_li_Perfil {
+  position: relative;
+  height: 11px;
+  width: 200px;
+  right: 32px;
+}
+
+.Opcao_a_Home, .Opcao_a_Perfil, .Opcao_a_Saida {
+  text-decoration: none;
+  outline: none;
+  color: #000000;
+}
+
+.Opcao_a_Home, .Opcao_a_Perfil {
+  display: block;
+  width: 195px;
+  height: 100%;
+  line-height: 6;
+  text-align: center;
+  font-size: 25px;
+}
+
+li#Opcao_li_Home {
+  background-color: rgba(177, 177, 177, 0.7);
+  border: 3px solid #000000;
+}
+
+.Opcao_li_Home:hover {
+  background-color: rgba(177, 177, 177, 0.7);
+  color: #000000;
+}
+
+li#Opt_li_Perfil {
+  background-color: rgba(196, 196, 196, 0.089);
+}
+
+.Opcao_li_Perfil:hover {
+  background-color: rgba(196, 196, 196, 0.3);
+  color: #000000;
+}
+
+.Opcao_li_Perfil:active {
+  background-color: rgba(196, 196, 196, 0.5);
+  color: #000000;
+  border: 3px solid #000000;
+}
+
+.Opcao_Saida {
+  display: flex;
+  width: 17.1%;
+  height: 10.2px;
+  margin: 1px;
+}
+
+ul#Opcao_ul_Saida {
+padding-left: 23px;
+margin-left: 25px;
+}
+
+.Opcao_a_Saida {
+  line-height: 6.5;
+  text-align: center;
+  font-size: 30px;
+  width: 230px;
+  height: 195px;
+  background-color: #8be4ff;
+  border: 2px solid #000000;
+}
+
+a.Opcao_a_Saida:hover {
+    background-color: #8be4ff;
+    color: #000000;
+  }
+
+a.Opcao_a_Saida:active {
+  background-color:rgba(253, 5, 5, 0.651);
+  border-bottom: 3px solid #000000;
+  border-left: 2px solid #000000;
+  border-top: 3px solid #000000;
+}
+
+.Container {  /* barreira entre Nav e área perfil*/
+  width: 100%;
+  height: 4em;
+  background-color: #8be4ff;
+}
+
+  /* Início área info perfil*/
+.Area_Perfil {
+  flex-flow: nowrap;
+  display: flex;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 0px -15px 25px rgba(0, 0, 0, .4);
+}
