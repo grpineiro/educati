@@ -1,172 +1,127 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Lilita+One&family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lilita+One&display=swap');
 
-/* Tentei seguir uma padrão seguindo o ritmo do código, ou seja, 
-para ir acompanhando o css, basta ler os o código de cima para baixo*/
-body {
+/* Main */
+#perfil {
   background-color: #8be4ff;
-}
-
-.perfil {
-  text-align: center;
-  margin: auto;
-}
-
-nav#Navbar_Perfil {
-  font-family: Arial, sans-serif;
   display: flex;
-  background-color: #ffffff;
-  text-align: left;
-  height: 160px;
-  width: 100%;
-}
-
-.Area_Info_Perfil {
-  flex-flow: row wrap;
-  width: 317px;
-  background-color: #ffffff;
-  display: flex;
-}
-
-div#Area_Img_Perfil {
-  width: 50px;
-}
-
-.Img_Perfil {
-  margin: 2px 1px;
-  width: 150px;
-  height: 150px;
-}
-
-.Area_Name_Points_Perfil {
-  margin: 15px auto;
-  padding-left: 90px;
-  padding-top: 10px;
-  display: block;
   align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100vh;
+  color: black;
 }
 
-p, a {
-  font-family: 'Lobster', cursive;
+/* Geral Navbar */
+#Navbar_Perfil {
+  padding-top: 0em;
+  padding-bottom: 0em;
 }
 
-p#Name_Perfil {
+/* User Image */
+#Img_Perfil {
+  width: 120px;
+  height: 130px;
+}
+
+/* Login User Name */
+#Name_Perfil {
   font-size: 26px;
   font-weight: 500;
 }
 
-p#Total_Stars_Perfil {
-  vertical-align: middle;
-  align-items: center;
-  font-size: 19px;
+/* Star counter in Navbar */
+#Total_Stars_Perfil {
+  font-size: 20px;
 }
 
-.Options_Nav_Perfil {
-  display: flex;
-  width: 1080px;
-  background-color: #ffffff;
-  border-left: 3px solid #000000;
+/* Separation between Name and Stars and Home and Profile Buttons */
+.Area_Name_Points_Perfil {
+  padding-right: 20px;
+  border-right: 2px solid #000000;
 }
 
-nav#Navbar_Perfil ul#Opt_Nav_Perfil {
-  list-style: none; 
+/* Home Button Icon in Navbar */
+#icon_Home_Perfil {
+  font-size: 70px;
+  padding-right: 7px;
+}
+
+/* Home Button */
+#Opt_Home_Perfil {
+  font-size: 35px;
+  height: 130px;
+  width: 180px;
+  line-height: 3;
+}
+
+/* Profile Button Icon in Navbar */
+#icon_Perfil {
+  font-size: 60px;
+  padding-right: 5px;
+}
+
+/* Profile Button */
+#Opt_Perfil {
+  font-size: 35px;
+  height: 130px;
+  width: 180px;
+  line-height: 3;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  background-color: rgba(196, 196, 196, 0.5);
+}
+
+/* Navbar: when hovering over the Home Button. */
+#Opt_Home_Perfil:hover {
+  background-color: rgba(196, 196, 196, 0.2);
+}
+
+/* Navbar: by clicking the Profile Button. */
+#Opt_Home_Perfil:active  {
+  width: 170px;
+  height: 130px;
+  border-top: 3px solid #000000;
+  border-right: 3px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+/* Quit Button Icon in Navbar */
+#icon_Exit_Perfil {
+  font-size: 60px;
+  padding-right: 7px;
+}
+
+/* Quit Button */
+#Opt_Quit_Perfil {
   position: absolute;
   top: 0px;
-  left: 261px;
+  right: 0px;
+  font-size: 35px;
+  height: 130px;
+  width: 180px;
+  line-height: 3;
 }
 
-nav#Navbar_Perfil li {
-  height: 160px;
-  width: 170px;
-  display: inline-block;
+/* Navbar: when hovering over the Quit Button. */
+#Opt_Quit_Perfil:hover {
+  width: 180px;
+  height: 130px;
+  background-color: rgba(255, 0, 0, 0.473);
 }
 
-.Opt_Home_Perfil, .Opt_Perfil, .Opt_a_Quit_Perfil {
-  display: inline-block;
-  text-decoration: none;
-  outline: none;
-  color: #000000;
-}
-
-.Opt_Home_Perfil {
-  width: 168px;
-  height: 156px;
-}
-
-.Opt_Perfil {
-  width: 163px;
-  height: 156px;
-}
-
-.Opt_Home_Perfil, .Opt_Perfil {
-  font-size: 25px;
-  line-height: 6;
-  text-align: center;
-  margin: 1px;
-}
-
-li#Opt_li_Home_Perfil {
-  background-color: rgba(196, 196, 196, 0.089);
-  border-bottom: 2px solid #000000;
-}
-
-li#Opt_li_Perfil {
-  background-color: rgba(196, 196, 196, 0.5);
-  border-bottom: 3px solid #000000;
-  border-left: 3px solid #000000;
-  border-right: 3px solid #000000;
-}
-
-li#Opt_li_Home_Perfil:hover {
-  background-color: rgba(196, 196, 196, 0.3);
-}
-
-a.Opt_Home_Perfil:active {
-  background-color: rgba(196, 196, 196, 0.5);
-  width: 169px;
-  height: 160px;
-  border-bottom: 2px solid #000000;
-  border-right: 3px solid #000000;
-}
-
-
-.Option_Quit_Perfil {
-  display: flex;
-  width: 230px;
-  height: 160px;
-  margin: auto;
-}
-
-ul#Opt_ul_Quit_Perfil {
-  padding-left: 0px;
-  width: 1px;
-}
-
-li#Opt_li_Quit_Perfil {
-  width: 1px;
-}
-
-.Opt_a_Quit_Perfil {
-  line-height: 5;
-  text-align: center;
-  padding-bottom: 2px;
-  font-size: 30px;
-  width: 211px;
-  height: 160px;
-  background-color: #8be4ff;
-  border: 2px solid #000000;
-}
-
-a.Opt_a_Quit_Perfil:active {
-  background-color:rgba(253, 5, 5, 0.651);
-  border-bottom: 3px solid #000000;
-  border-left: 2px solid #000000;
+/* Navbar: by clicking the Quit Button. */
+#Opt_Quit_Perfil:active {
+  width: 180px;
+  height: 130px;
   border-top: 3px solid #000000;
+  border-left: 3px solid #000000;
+  border-bottom: 1px solid #000000;
+  background-color: red;
 }
 
-
-
-  /* Início área info perfil*/
+/* Início área info perfil*/
+/* 
 .Area_Perfil_User {
   display: flex;
   margin: 40px 5px 0px 5px;
@@ -238,4 +193,4 @@ div#Space_Email_User_Perfil {
 
 #lbl_email_Perfil, #p_date_birth_Perfil, #p_Total_Stars_Perfil {
   font-size: 20px;
-}
+} */
