@@ -10,7 +10,7 @@ import { ImExit } from 'react-icons/im'
 import token_1 from '../../images/token_1.png'
 import edit from '../../images/camera_azul.png'
 
-const Emoji = props => (  //Função para adicionar Emoji
+const EmojiPerfil = props => (  //Função para adicionar Emoji
   <span
     className="emoji"
     role="img"
