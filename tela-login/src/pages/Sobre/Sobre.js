@@ -18,7 +18,7 @@ function Sobre() {
       <div for="CloudDownSobre">
         <img src={cloudSobre_2} id="Img_Cloud_Sobre_2" alt="imagem nuvem" />
       </div>
-      
+
       <h1 className="sobreTitle">Sobre nós</h1>
 
       <div className="Area_About_Us_Sobre">

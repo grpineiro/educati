@@ -33,7 +33,7 @@ function Cadastro() {
             <h1 id='cadastroTitle'>Cadastro</h1>
 
             <div className="col-md-7 col-lg-8 d-flex justify-content-center" id='cadastro-usuario'>
-                 <form onSubmit={handleSubmit(submitBody)}>
+                <form onSubmit={handleSubmit(submitBody)}>
                     <div className="row g-3 justify-content-center" id='itensFormCadastro'>
                         <div className="col-7">
                             <input onChange={handleChange} type="text" className="form-control-cadastro" id="nomeCadastro" name="first_name" placeholder="Nome" required />
@@ -61,7 +61,6 @@ function Cadastro() {
                         <button type='submit' className='btnCadastro'>Cadastrar</button>
                     </div>
                 </form>
-
 
                 <div className='forReturn'>
                     <Link to="/"><img src={arrow} className='arrowCadastro' alt='Return' /></Link>
