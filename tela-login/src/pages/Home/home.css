@@ -1,174 +1,127 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Lilita+One&family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lilita+One&display=swap');
 
-/* Tentei seguir uma padrão seguindo o ritmo do código, ou seja, 
-para ir acompanhando o css, basta ler os o código de cima para baixo*/
-
-.Corpo {
-  text-align: center;
-  margin: auto;
+/* Main */
+#sobre {
   background-color: #8be4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100vh;
+  color: black;
 }
 
-nav#Barra_navegacao {
-  background-color: #ffffff;
-  height: 179px;
-  width: 100%;
-  display: inline-flex;
-}
-
-.Div_Resumo_Perfil {
-  width: 300px;
-}
-
-div#Area_Imagem {
-  width: 50px;
-}
-
-.Img_Do_Perfil {
-  margin: 3px 5px;
-  width: 150px;
-  height: 150px;
-}
-
-.Div_Nome_Estrelas {
-  margin: 15px 0 0 40px;
-  padding-top: 14px;
-  text-align: center;
-}
-
-p, a {
+/* Geral Navbar */
+#Navbar_Home {
   font-family: 'Lobster', cursive;
+  padding-top: 0em;
+  padding-bottom: 0em;
 }
 
-p#Nome {
+/* User Image */
+#Img_User_Home {
+  width: 120px;
+  height: 130px;
+}
+
+/* Login User Name */
+#Name_User_Home {
   font-size: 26px;
   font-weight: 500;
 }
 
-p#Total_Estrelas {
+/* Star counter in Navbar */
+#Total_Stars_User_Home {
   font-size: 20px;
 }
 
-.Opcoes_Navegacao {
-  margin-right: 1px;
-  width: 1000px;
+/* Separation between Name and Stars and Home and Profile Buttons */
+.Area_Name_Points_User_Home {
+  padding-right: 20px;
+}
+
+/* Home Button Icon in Navbar */
+#icon_Home {
+  font-size: 70px;
+  padding-right: 7px;
+}
+
+/* Home Button */
+#Opt_Home {
+  font-size: 35px;
+  height: 130px;
+  width: 180px;
+  line-height: 3;
   border-left: 2px solid #000000;
-}
-
-nav#Barra_navegacao ul#Opt_ul_Navegacao {
-  display: flex;
-  list-style: none; 
-  width: 450px;
-}
-
-nav#Barra_navegacao li {
-  position: relative;
-  height: 11px;
-  width: 200px;
-  right: 32px;
-}
-
-li#Opcao_li_Home, li#Opcao_li_Perfil {
-  font-size: 25px;
-  line-height: 6;
-  text-align: center;
-  margin: 1px;
-}
-
-.Opcao_a_Home, .Opcao_a_Perfil, .Opcao_a_Saida {
-  display: inline-block;
-  text-decoration: none;
-  outline: none;
-  color: #000000;
-}
-
-.Opcao_a_Home {
-  width: 168px;
-  height: 156px;
-}
-
-.Opcao_a_Perfil {
-  width: 163px;
-  height: 156px;
-}
-
-.Opcao_a_Home, .Opcao_a_Perfil {
-  font-size: 25px;
-  line-height: 6;
-  text-align: center;
-  margin: 1px;
-}
-
-li#Opcao_li_Home {
-  background-color: rgba(196, 196, 196, 0.5);
-  border-bottom: 3px solid #000000;
-  border-left: 3px solid #000000;
-  border-right: 3px solid #000000;
-}
-
-.Opcao_li_Home:hover {
-  background-color: rgba(196, 196, 196, 0.3);
-  color: #000000;
-}
-
-li#Opt_li_Perfil {
-  background-color: rgba(196, 196, 196, 0.089);
+  border-right: 2px solid #000000;
   border-bottom: 2px solid #000000;
-}
-
-.Opcao_li_Perfil:hover {
-  background-color: rgba(196, 196, 196, 0.3);
-}
-
-.Opcao_li_Perfil:active {
   background-color: rgba(196, 196, 196, 0.5);
-  color: #000000;
-  border: 3px solid #000000;
 }
 
-.Opcao_Saida {
-  display: flex;
-  width: 230px;
-  height: 160px;
-  margin: auto;
+/* Navbar: when hovering over the Profile Button. */
+#Opt_Perfil_Home:hover {
+  background-color: rgba(196, 196, 196, 0.2);
 }
 
-ul#Opcao_ul_Saida {
-  padding-left: 0px;
-  width: 1px;
-}
-
-#Opcao_li_Saida {
-  width: 1px;
-}
-
-.Opcao_a_Saida {
-  line-height: 5;
-  text-align: center;
-  padding-bottom: 2px;
-  font-size: 30px;
-  width: 211px;
-  height: 160px;
-  background-color: #8be4ff;
-  border: 2px solid #000000;
-}
-
-a.Opcao_a_Saida:active {
-  background-color:rgba(253, 5, 5, 0.651);
-  border-bottom: 3px solid #000000;
-  border-left: 2px solid #000000;
+/* Navbar: by clicking the Profile Button. */
+#Opt_Perfil_Home:active  {
+  width: 170px;
+  height: 130px;
   border-top: 3px solid #000000;
+  border-right: 3px solid #000000;
+  border-bottom: 1px solid #000000;
 }
 
-.Container {  /* barreira entre Nav e área perfil*/
-  width: 100%;
-  height: 4em;
-  background-color: #8be4ff;
+/* Profile Button Icon in Navbar */
+#icon_Perfil_Home {
+  font-size: 60px;
+  padding-right: 5px;
 }
 
-  /* Início área info perfil*/
-.Area_Perfil {
+/* Profile Button */
+#Opt_Perfil_Home {
+  font-size: 35px;
+  height: 130px;
+  width: 180px;
+  line-height: 3;
+}
+
+/* Quit Button Icon in Navbar */
+#icon_Exit_Home {
+  font-size: 60px;
+  padding-right: 7px;
+}
+
+/* Quit Button */
+#Opt_Quit_Home {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 35px;
+  height: 130px;
+  width: 180px;
+  line-height: 3;
+}
+
+/* Navbar: when hovering over the Quit Button. */
+#Opt_Quit_Home:hover {
+  width: 180px;
+  height: 130px;
+  background-color: rgba(255, 0, 0, 0.473);
+}
+
+/* Navbar: by clicking the Quit Button. */
+#Opt_Quit_Home:active {
+  width: 180px;
+  height: 130px;
+  border-top: 3px solid #000000;
+  border-left: 3px solid #000000;
+  border-bottom: 1px solid #000000;
+  background-color: red;
+}
+
+/* Início área info perfil*/
+/* .Area_Perfil {
   display: flex;
   margin: 40px 5px 0px 5px;
   background-color: #ffffff;
@@ -180,4 +133,4 @@ a.Opcao_a_Saida:active {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   box-shadow: 0px -15px 25px rgba(0, 0, 0, .4);
-}
+} */

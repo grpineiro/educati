@@ -1,10 +1,14 @@
 import React from 'react';
+import './home.css';
 import { Link } from 'react-router-dom';
 
-import token_1 from '../../images/token_1.png'
-import './home.css';
+import { IoHomeOutline } from 'react-icons/io5'
+import { FaRegUserCircle } from 'react-icons/fa'
+import { ImExit } from 'react-icons/im'
 
-const Emoji = props => (  //Função para adicionar Emoji
+import token_1 from '../../images/token_1.png'
+
+const EmojiHome = props => (  //Função para adicionar Emoji
   <span
     className="emoji"
     role="img"
@@ -17,43 +21,49 @@ const Emoji = props => (  //Função para adicionar Emoji
 
 function Home() {
   return (
-    <div className="Corpo">
-      { /* Início da Área Navbar */}
-      <nav id="Barra_navegacao">
-        <div className="Div_Resumo_Perfil">
-          <div id="Area_Imagem">
-            <img src={token_1} className="Img_Do_Perfil" alt="Imagem perfil" />
-          </div>
-          <div className="Div_Nome_Estrelas">
-            <p id="Nome">Jorginho</p>
-            <p id="Total_Estrelas">{'\u2B50'}100</p>
-          </div>
-        </div>
-
-        <div className="Opcoes_Navegacao">
-          <ul id="Opt_ul_Navegacao">
-            <li id="Opcao_li_Home"><a className="Opcao_a_Home" href="#">Home</a></li>
-            <li id="Opcao_li_Perfil"><a className="Opcao_a_Perfil" href="#">Perfil</a></li>
-          </ul>
-        </div>
-        <div className="Opcao_Saida">
-          <Link to="/">
-            <ul id="Opcao_ul_Saida">
-              <li id="Opcao_li_Saida"><a className="Opcao_a_Saida" href="#">Sair</a></li>
+    <div id="corpo">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light" id="Navbar_Home">
+        <div className="container-fluid">
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse">
+            <img src={token_1} className="navbar-brand" id="Img_User_Home" alt="Imagem Usuário" />
+            <div className="Area_Name_Points_User_Home">
+              <p id="Name_User_Home">Jorginho</p>
+              <p id="Total_Stars_User_Home">{'\u2B50'}100</p>
+            </div>
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <a className="nav-link active" id="Opt_Home" aria-current="page" href="#">
+                  <IoHomeOutline id="icon_Home" />
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" id="Opt_Perfil_Home" aria-current="page" href="#">
+                  <FaRegUserCircle id="icon_Perfil_Home" />
+                  Perfil
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" id="Opt_Quit_Home" aria-current="page" href="#">
+                  <ImExit id="icon_Exit_Home" />
+                  Sair
+                </a>
+              </li>
             </ul>
-          </Link>
+          </div>
         </div>
       </nav>
       { /* Fim da Área Navbar */}
 
-      <div className="Container"></div>  { /* Faixa azul */}
-
-      { /* Início área usuário */}
-      <div className="Area_Perfil">
+      <div className="text-center" id="home">
+        <div className="Container"></div>  { /* Faixa azul */}
+        { /* Início área usuário */}
+        <div className="Area_Perfil"></div>
+        { /* Fim área usuário */}
       </div>
-
-      { /* Fim área usuário */}
-
     </div>
   );
 }
