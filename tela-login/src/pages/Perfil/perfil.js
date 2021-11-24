@@ -38,22 +38,22 @@ function Perfil() {
             </div>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" id="Opt_Home_Perfil" aria-current="page" href="#">
+                <Link to="/home" className="nav-link active" id="Opt_Home_Perfil" aria-current="page" href="#">
                   <IoHomeOutline id="icon_Home_Perfil" />
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" id="Opt_Perfil" aria-current="page" href="#">
+                <Link to="/perfil" className="nav-link active" id="Opt_Perfil" aria-current="page" href="#">
                   <FaRegUserCircle id="icon_Perfil" />
                   Perfil
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" id="Opt_Quit_Perfil" aria-current="page" href="#">
+                <Link to="/" className="nav-link active" id="Opt_Quit_Perfil" aria-current="page" href="#">
                   <ImExit id="icon_Exit_Perfil" />
                   Sair
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

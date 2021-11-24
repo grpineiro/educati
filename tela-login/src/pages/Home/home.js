@@ -38,22 +38,22 @@ function Home() {
             </div>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" id="Opt_Home" aria-current="page" href="#">
+                <Link to="/home" className="nav-link active" id="Opt_Home" aria-current="page">
                   <IoHomeOutline id="icon_Home" />
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" id="Opt_Perfil_Home" aria-current="page" href="#">
+                <Link to="/perfil" className="nav-link active" id="Opt_Perfil_Home" aria-current="page">
                   <FaRegUserCircle id="icon_Perfil_Home" />
                   Perfil
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" id="Opt_Quit_Home" aria-current="page" href="#">
+                <Link to="/" className="nav-link active" id="Opt_Quit_Home" aria-current="page">
                   <ImExit id="icon_Exit_Home" />
                   Sair
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
