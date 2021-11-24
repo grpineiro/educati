@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './home.css';
-import { Link } from 'react-router-dom';
 
 import { IoHomeOutline } from 'react-icons/io5'
 import { FaRegUserCircle } from 'react-icons/fa'
@@ -22,7 +23,8 @@ const EmojiHome = props => (  //Função para adicionar Emoji
 
 function Home() {
   return (
-    <div id="corpo">
+    <div id="home">
+      { /* Início da NavBar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light" id="Navbar_Home">
         <div className="container-fluid">
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,15 +59,8 @@ function Home() {
           </div>
         </div>
       </nav>
-      { /* Fim da Área Navbar */}
-
+      { /* Fim da Navbar */}
       <div class="forBlueDiv_Home"></div>  { /* Faixa azul */}
-
-      <div className="text-center" id="home">
-        { /* Início área usuário */}
-        <div className="Area_Perfil"></div>
-        { /* Fim área usuário */}
-      </div>
     </div>
   );
 }

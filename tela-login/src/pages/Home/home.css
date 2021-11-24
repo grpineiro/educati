@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Lilita+One&family=Lobster&display=swap');
 
-/* Main */
-#sobre {
-  background-color: #8be4ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  height: 100vh;
-  color: black;
-}
-
 /* Geral Navbar */
 #Navbar_Home {
   font-family: 'Lobster', cursive;
@@ -122,8 +111,8 @@
 
 /* Div for separation between NavBar and Home Items */
 .forBlueDiv_Home {
-  height: 5em;
   background-color: #8be4ff;
+  height: 5em;
   border: solid rgba(0, 0, 0, .15);
   border-width: 3px 0;
   box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
