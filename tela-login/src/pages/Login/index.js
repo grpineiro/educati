@@ -37,23 +37,23 @@ function Login() {
       <h1 id='loginTitle'>EducaTI</h1>
 
       <form>
-        <div class='mb-3' id='inputEmailLogin'>
+        <div className='mb-3' id='inputEmailLogin'>
           <MdEmail />
           <input
             type='email'
             placeholder='Endereço de e-mail'
-            class='form-control-login'
+            className='form-control-login'
             value={email}
             onChange={e => setEmail(e.target.value)}
           />
         </div>
 
-        <div class='mb-3' id='inputPasswordLogin'>
+        <div className='mb-3' id='inputPasswordLogin'>
           <RiLockPasswordFill />
           <input
             type={show ? 'text' : 'password'}
             placeholder='Senha'
-            class='form-control-login'
+            className='form-control-login'
             value={password}
             onChange={e => setPassword(e.target.value)}
           />

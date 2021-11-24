@@ -60,7 +60,7 @@ function Home() {
         </div>
       </nav>
       { /* Fim da Navbar */}
-      <div class="forBlueDiv_Home"></div>  { /* Faixa azul */}
+      <div className="forBlueDiv_Home"></div>  { /* Faixa azul */}
     </div>
   );
 }
