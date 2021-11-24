@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './home.css';
 import { Link } from 'react-router-dom';
 
@@ -58,8 +59,9 @@ function Home() {
       </nav>
       { /* Fim da Área Navbar */}
 
+      <div class="forBlueDiv_Home"></div>  { /* Faixa azul */}
+
       <div className="text-center" id="home">
-        <div className="Container"></div>  { /* Faixa azul */}
         { /* Início área usuário */}
         <div className="Area_Perfil"></div>
         { /* Fim área usuário */}
