@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Lilita+One&family=Lobster&display=swap');
 
-/* Main */
-#perfil {
-  background-color: #8be4ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  height: 100vh;
-  color: black;
-}
-
 /* Geral Navbar */
 #Navbar_Perfil {
   font-family: 'Lobster', cursive;
@@ -120,78 +109,127 @@
   border-bottom: 1px solid #000000;
   background-color: red;
 }
+/* End NavBar CSS */
 
-/* Início área info perfil*/
-/* 
-.Area_Perfil_User {
-  display: flex;
-  margin: 40px 5px 0px 5px;
-  background-color: #ffffff;
-  width: 1485px;
-  height: 564px;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  box-shadow: 0px -15px 25px rgba(0, 0, 0, .4);
+/* Div for separation between NavBar and Profile Items */
+.forBlueDiv_Perfil {
+  background-color: #8be4ff;
+  height: 5em;
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 3px 0;
+  box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
 }
 
-.Info_Perfil {
-  width: 220px;
-  height: 561px;
-  margin-left: 15px;
-  border-right: 2px solid #000000;
+/* Left Side: Profile Editor */
+/* User Image for Edit */
+#Img_Perfil2 {
+  width: 160px;
+  height: 160px;
 }
 
-.Div_Img_Perfil {
-  padding-top: 18px;
-}
-
-.Icon_edit_Perfil {
-  width: 42px;
-  height: 42px;
-}
-
-a#Icon_camera_Perfil {
+/* Edit icon (camera) */
+#Icon_edit_Perfil {
   position: absolute;
-  left: 158px;
-  top: 328px;
+  left: 160px;
+  top: 390px;
+  width: 60px;
+  height: 60px;
 }
 
-p#Info_Perfil_Name {
-  text-align: center;
-  font-size: 36px;
-  font-weight: 500;
+/* Username */
+#Name_Perfil2 {
+  font-family: 'Lobster', cursive;
+  padding-top: 30px;
+  font-size: 40px;
 }
 
-.Resumo_Perfil_Info {
-  width: 1230px;
-  height: 450px;
+/* Div for Line Separation between Perfil Editor and Perfil Data */
+.separationBar {
+  position: absolute;
+  width: 611px;
+  left: -20px;
+  top: 578px;
+  border: 1px solid #000000;
+  transform: rotate(90deg);
 }
 
-div#Email_Perfil, div#Birthday_Perfil, div#Stars_Perfil {
-  padding-top: 60px;
-  display: flex;
-  border-bottom: 2px solid #000000;
+/* Perfil Data */
+#Perfil_Data {
+  position: absolute;
+  top: 40px;
+  right: 375px;
 }
 
-#p_Email_Perfil, #lbl_email_Perfil, #p_birth_Perfil, #p_date_birth_Perfil, #p_Stars_Perfil, #p_Total_Stars_Perfil {
+/* E-mail Title */
+#emailTitle_Perfil {
+  position: absolute;
   font-family: 'Inter', sans-serif;
+  font-size: 50px;
+  top: 310px;
+  left: -1060px;
 }
 
-#p_Email_Perfil, #p_birth_Perfil, #p_Stars_Perfil {
-  width: 700px;
-  font-size: 22px;
-  text-align: center;
-  font-weight: 600;
+/* E-mail Text */
+#email_Perfil {
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  font-size: 50px;
+  top: 310px;
+  left: -288px;
 }
 
-div#Space_Email_User_Perfil {
-  font-size: 20px;
-  text-align: left;
+/* Div for Line Separation between Data */
+.separationBar1_data {
+  position: absolute;
+  width: 1633px;
+  left: -1258px;
+  top: 405px;
+  border: 1px solid #000000;
+  transform: rotate(180deg);
 }
 
-#lbl_email_Perfil, #p_date_birth_Perfil, #p_Total_Stars_Perfil {
-  font-size: 20px;
-} */
+/* Birthday Title */
+#birthdayTitle_Perfil {
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  font-size: 50px;
+  top: 450px;
+  left: -1060px;
+}
+
+/* Birthday Text */
+#birthday_Perfil {
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  font-size: 50px;
+  top: 450px;
+  left: -75px;
+}
+
+/* Div for Line Separation between Data */
+.separationBar2_data {
+  position: absolute;
+  width: 1633px;
+  left: -1258px;
+  top: 550px;
+  border: 1px solid #000000;
+  transform: rotate(180deg);
+}
+
+/* Total Stars Title */
+#TotalStarsTitle_Perfil {
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  font-size: 50px;
+  top: 580px;
+  left: -1060px;
+}
+
+/* Total Stars Text */
+#TotalStars_Data_Perfil {
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  font-size: 50px;
+  top: 580px;
+  left: 98px;
+}

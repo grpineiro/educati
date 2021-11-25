@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './perfil.css';
-import { Link } from 'react-router-dom'
 
 import { IoHomeOutline } from 'react-icons/io5'
 import { FaRegUserCircle } from 'react-icons/fa'
@@ -23,8 +24,8 @@ const EmojiPerfil = props => (  //Função para adicionar Emoji
 
 function Perfil() {
   return (
-    <div id="initialNavbar">
-      { /* Início da Área Navbar */}
+    <div id="perfil">
+      { /* Início da NavBar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light" id="Navbar_Perfil">
         <div className="container-fluid">
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,42 +60,36 @@ function Perfil() {
           </div>
         </div>
       </nav>
-      { /* Fim da Área Navbar */}
+      {/* Fim da NavBar */}
 
-      <div className="text-center" id="perfil">
-        {/* Início área usuário  */}
-        {/* Área lateral esquerda: Foto e nome. */}
-        <div className="Area_Perfil_User">
-          <div className="Info_Perfil">
-            <div className="Div_Img_Perfil">
-              <img src={token_1} className="Img_Perfil" alt="Imagem perfil" />
-              <a id="Icon_camera_Perfil" href="#"><img src={edit} className="Icon_edit_Perfil" alt="alterar foto perfil" /></a>
-            </div>
-            <p id="Info_Perfil_Name">Jorginho</p>
-          </div>
-          { /* Fim área esquerda */}
+      <div className="forBlueDiv_Perfil"></div>  { /* Faixa azul */}
 
-          { /* Início área direita: Email, Data Nascimento, Qtd. Estrelas */}
-          <div className="Resumo_Perfil_Info">
-            <div id="Email_Perfil">
-              <div className="Space_Email_Perfil">
-                <p id="p_Email_Perfil">E-mail: </p>
-              </div>
-              <div id="Space_Email_User_Perfil">
-                <label id="lbl_email_Perfil">email@dominio.com</label>
-              </div>
-            </div>
-            <div id="Birthday_Perfil">
-              <p id="p_birth_Perfil">Nascimento: </p>
-              <p id="p_date_birth_Perfil">01/01/2000</p>
-            </div>
-            <div id="Stars_Perfil">
-              <p id="p_Stars_Perfil">Estrelas conquistadas:</p>
-              <p id="p_Total_Stars_Perfil">{'\u2B50'}100</p>
-            </div>
+      {/* Início da edição de perfil (lado esquerdo) */}
+      <div className="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+        <div className="me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-black overflow-hidden">
+          <div className="my-6 py-6">
+            <img src={token_1} id="Img_Perfil2" alt="Imagem perfil" />
+            <a id="Icon_camera" href="#"><img src={edit} id="Icon_edit_Perfil" alt="alterar foto perfil" /></a>
+            <p id="Name_Perfil2">Jorginho</p>
           </div>
         </div>
-        { /* Fim área usuário */}
+        {/* Fim da edição de perfil (lado esquerdo) */}
+        <div className="separationBar"></div> {/* Separação horizontal */}
+
+        {/* Início da visualização de dados (lado direito) */}
+        <div id="Perfil_Data">
+          <ul className="list-group list-group-flush">
+            <li className="list-group" id="emailTitle_Perfil">E-mail:</li>
+            <li className="list-group" id="email_Perfil">dominio@email.com</li>
+            <div className="separationBar1_data"></div>
+            <li className="list-group" id="birthdayTitle_Perfil">Data de Nascimento:</li>
+            <li className="list-group" id="birthday_Perfil">01/01/1998</li>
+            <div className="separationBar2_data"></div>
+            <li className="list-group" id="TotalStarsTitle_Perfil">Estrelas conquistadas:</li>
+            <li className="list-group" id="TotalStars_Data_Perfil">120</li>
+          </ul>
+        </div>
+        {/* Fim da visualização de dados (lado direito) */}
       </div>
     </div>
   );
