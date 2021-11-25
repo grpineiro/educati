@@ -26,7 +26,7 @@ function Perfil() {
   return (
     <div id="perfil">
       { /* Início da NavBar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-light" id="Navbar_Perfil">
+      <nav className="navbar navbar-expand-lg navbar-light" id="Navbar_Perfil">
         <div className="container-fluid">
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -86,7 +86,7 @@ function Perfil() {
             <li className="list-group" id="birthday_Perfil">01/01/1998</li>
             <div className="separationBar2_data"></div>
             <li className="list-group" id="TotalStarsTitle_Perfil">Estrelas conquistadas:</li>
-            <li className="list-group" id="TotalStars_Data_Perfil">120</li>
+            <li className="list-group" id="TotalStars_Data_Perfil">{'\u2B50'}120</li>
           </ul>
         </div>
         {/* Fim da visualização de dados (lado direito) */}
