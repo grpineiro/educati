@@ -25,7 +25,7 @@ function Home() {
   return (
     <div id="home">
       { /* Início da NavBar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-light" id="Navbar_Home">
+      <nav className="navbar navbar-expand-lg navbar-light" id="Navbar_Home">
         <div className="container-fluid">
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -60,7 +60,75 @@ function Home() {
         </div>
       </nav>
       { /* Fim da Navbar */}
+
       <div className="forBlueDiv_Home"></div>  { /* Faixa azul */}
+
+      <div class="album py-5">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                  role="img" aria-label="Placeholder: Game1" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>#GAME1</title>
+                  <rect width="100%" height="100%" fill="#55595c" />
+                  <text x="40%" y="50%" fill="#eceeef" dy=".3em">#GAME1</text>
+                </svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                  role="img" aria-label="Placeholder: Game2" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>#GAME2</title>
+                  <rect width="100%" height="100%" fill="#55595c" />
+                  <text x="40%" y="50%" fill="#eceeef" dy=".3em">#GAME2</text>
+                </svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                  role="img" aria-label="Placeholder: Game3" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>#GAME3</title>
+                  <rect width="100%" height="100%" fill="#55595c" />
+                  <text x="40%" y="50%" fill="#eceeef" dy=".3em">#GAME3</text>
+                </svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                  role="img" aria-label="Placeholder: Game4" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c" />
+                  <text x="40%" y="50%" fill="#eceeef" dy=".3em">#GAME4</text>
+                </svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                  role="img" aria-label="Placeholder: Game5" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c" /><text x="40%" y="50%" fill="#eceeef"
+                    dy=".3em">#GAME5</text>
+                </svg>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                  role="img" aria-label="Placeholder: Game6" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <title>Placeholder</title>
+                  <rect width="100%" height="100%" fill="#55595c" /><text x="40%" y="50%" fill="#eceeef"
+                    dy=".3em">#GAME6</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,134 +1,246 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Lilita+One&family=Lobster&display=swap');
 
-/* Geral Navbar */
-#Navbar_Home {
-  font-family: 'Lobster', cursive;
-  padding-top: 0em;
-  padding-bottom: 0em;
-}
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+  /* Geral Navbar */
+  #Navbar_Home {
+    background-color: #8be4ff;
+    font-family: 'Lobster', cursive;
+    padding-top: 0em;
+    padding-bottom: 0em;
+  }
+  
+  /* User Image */
+  #Img_User_Home {
+    width: 120px;
+    height: 130px;
+  }
 
-/* User Image */
-#Img_User_Home {
-  width: 120px;
-  height: 130px;
-}
+  /* Login User Name */
+  #Name_User_Home {
+    font-size: 26px;
+    font-weight: 500;
+  }
 
-/* Login User Name */
-#Name_User_Home {
-  font-size: 26px;
-  font-weight: 500;
-}
+  /* Star counter in Navbar */
+  #Total_Stars_User_Home {
+    font-size: 20px;
+  }
 
-/* Star counter in Navbar */
-#Total_Stars_User_Home {
-  font-size: 20px;
-}
+  /* Separation between Name and Stars and Home and Profile Buttons */
+  .Area_Name_Points_User_Home {
+    padding-right: 20px;
+  }
 
-/* Separation between Name and Stars and Home and Profile Buttons */
-.Area_Name_Points_User_Home {
-  padding-right: 20px;
-}
+  /* Home Button Icon in Navbar */
+  #icon_Home {
+    font-size: 70px;
+    padding-right: 7px;
+  }
 
-/* Home Button Icon in Navbar */
-#icon_Home {
-  font-size: 70px;
-  padding-right: 7px;
-}
+  /* Home Button */
+  #Opt_Home {
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    background-color: rgba(196, 196, 196, 0.5);
+  }
 
-/* Home Button */
-#Opt_Home {
-  font-size: 35px;
-  height: 130px;
-  width: 180px;
-  line-height: 3;
-  border-left: 2px solid #000000;
-  border-right: 2px solid #000000;
-  border-bottom: 2px solid #000000;
-  background-color: rgba(196, 196, 196, 0.5);
-}
+  /* Navbar: when hovering over the Profile Button. */
+  #Opt_Perfil_Home:hover {
+    background-color: rgba(196, 196, 196, 0.2);
+  }
 
-/* Navbar: when hovering over the Profile Button. */
-#Opt_Perfil_Home:hover {
-  background-color: rgba(196, 196, 196, 0.2);
-}
+  /* Navbar: by clicking the Profile Button. */
+  #Opt_Perfil_Home:active  {
+    width: 170px;
+    height: 130px;
+    border-top: 3px solid #000000;
+    border-right: 3px solid #000000;
+    border-bottom: 1px solid #000000;
+  }
 
-/* Navbar: by clicking the Profile Button. */
-#Opt_Perfil_Home:active  {
-  width: 170px;
-  height: 130px;
-  border-top: 3px solid #000000;
-  border-right: 3px solid #000000;
-  border-bottom: 1px solid #000000;
-}
+  /* Profile Button Icon in Navbar */
+  #icon_Perfil_Home {
+    font-size: 60px;
+    padding-right: 5px;
+  }
 
-/* Profile Button Icon in Navbar */
-#icon_Perfil_Home {
-  font-size: 60px;
-  padding-right: 5px;
-}
+  /* Profile Button */
+  #Opt_Perfil_Home {
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+  }
 
-/* Profile Button */
-#Opt_Perfil_Home {
-  font-size: 35px;
-  height: 130px;
-  width: 180px;
-  line-height: 3;
-}
+  /* Quit Button Icon in Navbar */
+  #icon_Exit_Home {
+    font-size: 60px;
+    padding-right: 7px;
+  }
 
-/* Quit Button Icon in Navbar */
-#icon_Exit_Home {
-  font-size: 60px;
-  padding-right: 7px;
-}
+  /* Quit Button */
+  #Opt_Quit_Home {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+  }
 
-/* Quit Button */
-#Opt_Quit_Home {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  font-size: 35px;
-  height: 130px;
-  width: 180px;
-  line-height: 3;
-}
+  /* Navbar: when hovering over the Quit Button. */
+  #Opt_Quit_Home:hover {
+    width: 180px;
+    height: 130px;
+    background-color: rgba(255, 0, 0, 0.473);
+  }
 
-/* Navbar: when hovering over the Quit Button. */
-#Opt_Quit_Home:hover {
-  width: 180px;
-  height: 130px;
-  background-color: rgba(255, 0, 0, 0.473);
-}
+  /* Navbar: by clicking the Quit Button. */
+  #Opt_Quit_Home:active {
+    width: 180px;
+    height: 130px;
+    border-top: 3px solid #000000;
+    border-left: 3px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: red;
+  }
 
-/* Navbar: by clicking the Quit Button. */
-#Opt_Quit_Home:active {
-  width: 180px;
-  height: 130px;
-  border-top: 3px solid #000000;
-  border-left: 3px solid #000000;
-  border-bottom: 1px solid #000000;
-  background-color: red;
+  /* Div for separation between NavBar and Home Items */
+  .forBlueDiv_Home {
+    display: none;
+  }
 }
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) { }
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) { }
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  /* Geral Navbar */ /* <- FIRST */
+  #Navbar_Home {
+    background-color: white;
+  }
 
-/* Div for separation between NavBar and Home Items */
-.forBlueDiv_Home {
-  background-color: #8be4ff;
-  height: 5em;
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 3px 0;
-  box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+  /* Div for separation between NavBar and Home Items */ /* <- LAST */
+  .forBlueDiv_Home {
+    display: revert;
+    background-color: #8be4ff;
+    height: 5em;
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 3px 0;
+    box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+  }
 }
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) { }
+/* Other Devices - Full HD, 4K */
+@media only screen and (min-width : 1800px) {
+  /* User Image */
+  #Img_User_Home {
+    width: 120px;
+    height: 130px;
+  }
 
-/* Início área info perfil*/
-/* .Area_Perfil {
-  display: flex;
-  margin: 40px 5px 0px 5px;
-  background-color: #ffffff;
-  width: 1485px;
-  height: 564px;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  box-shadow: 0px -15px 25px rgba(0, 0, 0, .4);
-} */
+  /* Login User Name */
+  #Name_User_Home {
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  /* Star counter in Navbar */
+  #Total_Stars_User_Home {
+    font-size: 20px;
+  }
+
+  /* Separation between Name and Stars and Home and Profile Buttons */
+  .Area_Name_Points_User_Home {
+    padding-right: 20px;
+  }
+
+  /* Home Button Icon in Navbar */
+  #icon_Home {
+    font-size: 70px;
+    padding-right: 7px;
+  }
+
+  /* Home Button */
+  #Opt_Home {
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    background-color: rgba(196, 196, 196, 0.5);
+  }
+
+  /* Navbar: when hovering over the Profile Button. */
+  #Opt_Perfil_Home:hover {
+    background-color: rgba(196, 196, 196, 0.2);
+  }
+
+  /* Navbar: by clicking the Profile Button. */
+  #Opt_Perfil_Home:active  {
+    width: 170px;
+    height: 130px;
+    border-top: 3px solid #000000;
+    border-right: 3px solid #000000;
+    border-bottom: 1px solid #000000;
+  }
+
+  /* Profile Button Icon in Navbar */
+  #icon_Perfil_Home {
+    font-size: 60px;
+    padding-right: 5px;
+  }
+
+  /* Profile Button */
+  #Opt_Perfil_Home {
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+  }
+
+  /* Quit Button Icon in Navbar */
+  #icon_Exit_Home {
+    font-size: 60px;
+    padding-right: 7px;
+  }
+
+  /* Quit Button */
+  #Opt_Quit_Home {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+  }
+
+  /* Navbar: when hovering over the Quit Button. */
+  #Opt_Quit_Home:hover {
+    width: 180px;
+    height: 130px;
+    background-color: rgba(255, 0, 0, 0.473);
+  }
+
+  /* Navbar: by clicking the Quit Button. */
+  #Opt_Quit_Home:active {
+    width: 180px;
+    height: 130px;
+    border-top: 3px solid #000000;
+    border-left: 3px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: red;
+  }
+}
