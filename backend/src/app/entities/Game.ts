@@ -6,8 +6,8 @@ export interface Game {
 };
 
 const schema = new Schema<Game>({
-  game: { type: String, required: true, maxlength: 30 },
-  type: { type: String, required: true, maxlength: 30 },
+  game: { type: String, required: true, maxlength: 40 },
+  type: { type: String, required: true, maxlength: 40 },
 });
 
 const GameEntity = model<Game>("Game", schema);
