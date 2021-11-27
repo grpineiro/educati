@@ -1,13 +1,14 @@
 import { Schema, model } from "mongoose";
-
 export interface Game {
-  game: string;
+  name: string;
   type: string;
+  description: string;
 };
 
 const schema = new Schema<Game>({
-  game: { type: String, required: true, maxlength: 40 },
+  name: { type: String, required: true, maxlength: 40 },
   type: { type: String, required: true, maxlength: 40 },
+  description: { type: String, required: true, maxlength: 100 }
 });
 
 const GameEntity = model<Game>("Game", schema);
