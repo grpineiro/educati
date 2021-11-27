@@ -35,7 +35,7 @@ function Perfil() {
             <img src={token_1} className="navbar-brand" id="Img_Perfil" alt="Imagem perfil" />
             <div className="Area_Name_Points_Perfil">
               <p id="Name_Perfil">Jorginho</p>
-              <p id="Total_Stars_Perfil">{'\u2B50'}100</p>
+              <p id="Total_Stars_Perfil">{'\u2B50'}120</p>
             </div>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">

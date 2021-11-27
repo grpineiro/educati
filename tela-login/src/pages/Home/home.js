@@ -10,17 +10,6 @@ import { ImExit } from 'react-icons/im'
 
 import token_1 from '../../images/token_1.png'
 
-const EmojiHome = props => (  //Função para adicionar Emoji
-  <span
-    className="emoji"
-    role="img"
-    aria-label={props.label ? props.label : ""}
-    aria-hidden={props.label ? "false" : "true"}
-  >
-    {props.symbol}
-  </span>
-)
-
 function Home() {
   return (
     <div id="home">
@@ -34,7 +23,7 @@ function Home() {
             <img src={token_1} className="navbar-brand" id="Img_User_Home" alt="Imagem Usuário" />
             <div className="Area_Name_Points_User_Home">
               <p id="Name_User_Home">Jorginho</p>
-              <p id="Total_Stars_User_Home">{'\u2B50'}100</p>
+              <p id="Total_Stars_User_Home">{'\u2B50'}120</p>
             </div>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
@@ -63,12 +52,12 @@ function Home() {
 
       <div className="forBlueDiv_Home"></div>  { /* Faixa azul */}
 
-      <div class="album py-5">
-        <div class="container">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+      <div className="album py-5">
+        <div className="container">
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div className="col">
+              <div className="card shadow-sm">
+                <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
                   role="img" aria-label="Placeholder: Game1" preserveAspectRatio="xMidYMid slice" focusable="false">
                   <title>#GAME1</title>
                   <rect width="100%" height="100%" fill="#55595c" />
@@ -76,9 +65,9 @@ function Home() {
                 </svg>
               </div>
             </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+            <div className="col">
+              <div className="card shadow-sm">
+                <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
                   role="img" aria-label="Placeholder: Game2" preserveAspectRatio="xMidYMid slice" focusable="false">
                   <title>#GAME2</title>
                   <rect width="100%" height="100%" fill="#55595c" />
@@ -86,9 +75,9 @@ function Home() {
                 </svg>
               </div>
             </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+            <div className="col">
+              <div className="card shadow-sm">
+                <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
                   role="img" aria-label="Placeholder: Game3" preserveAspectRatio="xMidYMid slice" focusable="false">
                   <title>#GAME3</title>
                   <rect width="100%" height="100%" fill="#55595c" />
@@ -96,9 +85,9 @@ function Home() {
                 </svg>
               </div>
             </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+            <div className="col">
+              <div className="card shadow-sm">
+                <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
                   role="img" aria-label="Placeholder: Game4" preserveAspectRatio="xMidYMid slice" focusable="false">
                   <title>Placeholder</title>
                   <rect width="100%" height="100%" fill="#55595c" />
@@ -106,9 +95,9 @@ function Home() {
                 </svg>
               </div>
             </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+            <div className="col">
+              <div className="card shadow-sm">
+                <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
                   role="img" aria-label="Placeholder: Game5" preserveAspectRatio="xMidYMid slice" focusable="false">
                   <title>Placeholder</title>
                   <rect width="100%" height="100%" fill="#55595c" /><text x="40%" y="50%" fill="#eceeef"
@@ -116,9 +105,9 @@ function Home() {
                 </svg>
               </div>
             </div>
-            <div class="col">
-              <div class="card shadow-sm">
-                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+            <div className="col">
+              <div className="card shadow-sm">
+                <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
                   role="img" aria-label="Placeholder: Game6" preserveAspectRatio="xMidYMid slice" focusable="false">
                   <title>Placeholder</title>
                   <rect width="100%" height="100%" fill="#55595c" /><text x="40%" y="50%" fill="#eceeef"
