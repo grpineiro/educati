@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
 import UserEntity, { User } from "../entities/User";
+import jwtService, { JsonWebTokenError } from "jsonwebtoken";
+import { generateToken } from "../middlewares/auth";
 
 export default class UserController {
 
@@ -40,7 +42,10 @@ export default class UserController {
     });
 
     await user.save();
-    return res.send(user);
+    return res.send({
+      user,
+      token: generateToken({ id: user.id })
+    });
   }
 
 
@@ -49,7 +54,7 @@ export default class UserController {
       if (err)
         return res.status(400).json(err);
 
-      res.json(users);
+      return res.json(users);
     });
   }
 
@@ -60,7 +65,7 @@ export default class UserController {
       if (err)
         return res.status(400).json(err);
 
-      res.json(user);
+      return res.json(user);
     });
   }
   public async getUserByEmail(req: Request, res: Response) {
@@ -73,7 +78,7 @@ export default class UserController {
       if (!user)
         return res.status(400).json({ "message": "Usuário não encontrado" });
 
-      res.json(user);
+      return res.json(user);
     })
   }
 
@@ -98,14 +103,6 @@ export default class UserController {
     if (!password)
       return res.status(422).json(msgObg);
 
-    async function emailExists(email: string) {
-      return await UserEntity.findOne({ email }).exec();
-    }
-
-    if (await emailExists(email)) {
-      return res.status(503).json({ "message": "Email já existe" });
-    }
-
     UserEntity.findByIdAndUpdate(id, {
       first_name,
       last_name,
@@ -116,7 +113,12 @@ export default class UserController {
       if (err)
         return res.status(400).json(err);
 
-      res.json(user);
+      if (!user)
+        return res.status(400).send({ message: "usuario não existe." })
+
+      console.log(res.get("code"));
+
+      return res.status(200).send({ message: "Ok" });
     });
   }
 
@@ -127,7 +129,7 @@ export default class UserController {
       if (err)
         return res.status(400).json(err);
 
-      res.json({ user, "message": "Usuario deletado" });
+      return res.status(200).send({ user, "message": "Usuário deletado" });
     });
   }
 
@@ -147,10 +149,21 @@ export default class UserController {
       if (!user)
         return res.status(400).json({ "message": "Usuário não encontrado" });
 
-      if (user.password !== password)
-        return res.status(400).json({ "message": "Senha incorreta" });
+      user.comparePassword(password, (err: Error, isMatch: boolean) => {
+        if (err) {
+          throw err;
+        } else if (!isMatch) {
+          return res.status(400).send({ "message": "Senha incorreta." })
+        } else {
+          return res.send({
+            user,
+            token: generateToken({ id: user.id })
+          })
+        }
 
-      res.json(user);
+      });
+
+
     });
   }
 }
