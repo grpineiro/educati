@@ -1,7 +1,9 @@
-import { Schema, model } from "mongoose";
+import { Schema, model, Callback } from "mongoose";
+import { Response } from "express";
 import bcrypt from "bcrypt";
 
 export interface User {
+  id: string;
   first_name: string;
   last_name: string;
   email: string;
