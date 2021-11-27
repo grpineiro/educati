@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import AdminEntity, { Admin } from "../entities/Admin";
+import { generateToken } from "../middlewares/auth";
 
 export default class AdminController {
 
@@ -63,11 +64,11 @@ export default class AdminController {
       res.json(admin);
     });
   }
-  
+
   public async updateAdmin(req: Request, res: Response) {
     const { id } = req.params;
     const { first_name, last_name, email, birth, password } = req.body;
-    
+
     const msgObg = { "message": "Campo Obrigatorio" };
 
     if (!first_name)
@@ -95,22 +96,25 @@ export default class AdminController {
       if (err)
         return res.status(400).json(err);
 
-      res.json(admin);
+      if (!admin)
+        return res.status(422).send({ message: "Admin não existente" });
+
+      return res.json({ "message": "Ok" });
     });
   }
 
-  public async deleteAdmin(req: Request, res: Response) {
+  public deleteAdmin(req: Request, res: Response) {
     const { id } = req.params;
 
     AdminEntity.findByIdAndDelete(id).exec((err, admin) => {
       if (err)
         return res.status(400).json(err);
 
-      res.json({admin, "message": "Usuario deletado"});
+      return res.json({ admin, "message": "Usuario deletado" });
     });
   }
 
-  public async loginAdmin(req: Request, res: Response) {
+  public loginAdmin(req: Request, res: Response) {
     const { email, password } = req.body;
 
     if (!email)
@@ -124,12 +128,25 @@ export default class AdminController {
         return res.status(400).json(err);
 
       if (!admin)
-        return res.status(400).json({ "message": "Usuário não encontrado" });
+        return res.status(400).json({ "message": "Admin não encontrado" });
 
-      if (admin.password !== password)
-        return res.status(400).json({ "message": "Senha incorreta" });
+      //if (admin.password !== password)
+      //return res.status(400).json({ "message": "Senha incorreta" });
 
-      res.json(admin);
+      admin.comparePassword(password, (err: Error, isMatch: boolean) => {
+        if (err) {
+          throw err;
+        } else if (!isMatch) {
+          console.log(isMatch)
+          return res.status(400).send({ "message": "Senha incorreta." })
+        } else {
+          return res.send({
+            admin,
+            token: generateToken({ id: admin.id })
+          })
+        }
+
+      });
     });
   }
 }
