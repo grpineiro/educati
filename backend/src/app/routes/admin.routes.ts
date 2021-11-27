@@ -1,18 +1,21 @@
 import { Router } from "express";
 import AdminController from "../controllers/AdminController";
+import ValidationJWT from "../middlewares/auth";
 
 const AdminRoutes = () => {
   const admins = new AdminController();
   const routes = Router();
 
-  routes.get("/list/admin", admins.getAdmins);
-  routes.get("/list/admin/:id", admins.getAdmin);
+  routes.post("/login/admin", admins.loginAdmin);
+
+  routes.get("/list/admins", ValidationJWT, admins.getAdmins);
+  routes.get("/list/admin/:id", ValidationJWT, admins.getAdmin);
 
   routes.post("/create/admin", admins.createAdmin);
 
-  routes.put("/update/admin/:id", admins.updateAdmin);
+  routes.put("/update/admin/:id", ValidationJWT, admins.updateAdmin);
 
-  routes.delete("/delete/admin/:id", admins.deleteAdmin);
+  routes.delete("/delete/admin/:id", ValidationJWT, admins.deleteAdmin);
 
   return routes;
 }
