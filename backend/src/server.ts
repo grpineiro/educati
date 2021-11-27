@@ -5,14 +5,14 @@ import UserRoutes from "./app/routes/user.routes";
 import AdminRoutes from "./app/routes/admin.routes";
 
 import "./database/connection";
-import { appendFile } from "fs";
+import GameRoutes from "./app/routes/game.routes";
 
 const server = express();
 
 const corsOptions = {
-  origin:'*', 
-   credentials:true,            //access-control-allow-credentials:true
-   optionSuccessStatus:200,
+  origin: '*',
+  credentials: true,            //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
 };
 
 server.use(cors(corsOptions));
@@ -21,6 +21,7 @@ server.use(cors(corsOptions));
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
+server.use(GameRoutes);
 server.use(AdminRoutes);
 server.use(UserRoutes);
 
