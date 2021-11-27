@@ -12,8 +12,8 @@ export interface User {
 };
 
 const schema = new Schema<User>({
-  first_name: { type: String, required: true, maxlength: 30 },
-  last_name: { type: String, required: true, maxlength: 30 },
+  first_name: { type: String, required: true, maxlength: 100 },
+  last_name: { type: String, required: true, maxlength: 100 },
   email: { type: String, required: true, unique: true, },
   password: { type: String, required: true },
   birth: { type: Date, required: true, max: new Date() }
