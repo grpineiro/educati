@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
+require("dotenv").config();
 
 const connection = async () => {
 
-  const mongoURL = "mongodb://127.0.0.1/educati";
+  const mongoURL = `${process.env.DB_HOST}/${process.env.DB_NAME}`
 
   return await mongoose.connect(mongoURL)
     .then(() => {
