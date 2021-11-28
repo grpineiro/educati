@@ -6,6 +6,8 @@ import Sobre from "./Sobre"
 import Perfil from "./Perfil"
 import Home from "./Home"
 
+import Velha from "./Games/Velha";
+
 const Rotas = () => {
   // const routes = useRoutes([
   //   {path: "/", component: Login, index: true},
@@ -20,6 +22,7 @@ const Rotas = () => {
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/home" element={<Home />} />
       <Route path="/perfil" element={<Perfil />} />
+      <Route path="/games/velha" element={<Velha />}/>
     </Routes>
   )
 
