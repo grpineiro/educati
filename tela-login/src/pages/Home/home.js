@@ -11,6 +11,8 @@ import { ImExit } from 'react-icons/im'
 import { UserContext } from '../../contexts/user.context'
 
 import token_1 from '../../images/token_1.png'
+import jogo_velha from '../../images/previa_Velha.jpg'
+import jogo_memoria from '../../images/previa_Memoria.jpg'
 
 function Home() {
   const { signOut, user } = useContext(UserContext);
@@ -74,11 +76,11 @@ function Home() {
             <div className="col">
               <div className="card shadow-sm">
                 <Link to="/games/velha">
-                  <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                    role="img" aria-label="Placeholder: Game1" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <svg className="bd-placeholder-img card-img-top" id="quadrante1" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                    role="img" aria-label="Placeholder: Jogo da Velha" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <title>#GAME1</title>
-                    <rect width="100%" height="100%" fill="#55595c" />
-                    <text x="40%" y="50%" fill="#eceeef" dy=".3em">#GAME1</text>
+                    <rect width="100%" height="100%" fill="transparent" />
+                    <text id="text_q1" x="35%" y="50%" dy=".3em">Jogo da Velha</text>
                   </svg>
                 </Link>
               </div>
@@ -86,11 +88,11 @@ function Home() {
             <div className="col">
               <div className="card shadow-sm">
                 <Link to="/games/memoria">
-                  <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                    role="img" aria-label="Placeholder: Game2" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <svg className="bd-placeholder-img card-img-top" id="quadrante2" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                    role="img" aria-label="Placeholder: Jogo da Memória" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <title>#GAME2</title>
-                    <rect width="100%" height="100%" fill="#55595c" />
-                    <text x="40%" y="50%" fill="#eceeef" dy=".3em">#GAME2</text>
+                    <rect width="100%" height="100%" fill="transparent" />
+                    <text id="text_q2" x="30%" y="50%" dy=".3em">Jogo da Memória</text>
                   </svg>
                 </Link>
               </div>

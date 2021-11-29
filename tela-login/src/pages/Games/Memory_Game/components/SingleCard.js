@@ -12,12 +12,13 @@ function SingleCard({ card, handleChoice, flipped, disabled }) {
   return (
     <div id="card_game">
       <div id={flipped ? "flipped" : ""}>
-        <img id="front" src={card.src} alt="Carta de frente" />
+        <img id="front" src={card.src} draggable="false" alt="Carta de frente" />
         <img
           id="back"
           src="../imgs/EducaTI.jpg"
           onClick={handleClick}
           alt="Fundo carta EducaTI"
+          draggable="false"
         />
       </div>
     </div>

@@ -29,8 +29,11 @@
   font-size: 26px;
 }
 
-button#btn_novo_jogo {
+
+
+button#btn_novo_jogo, button#btn_retornar {
   margin-top: 10px;
+  margin-right: 15px;
   background: none;
   border: 2px solid #ffffff;
   padding: 6px 12px;
@@ -46,6 +49,13 @@ button#btn_novo_jogo:hover {
     color: #ffffff;
     box-shadow: 0px 1px 50px #66cc33;
 }
+
+button#btn_retornar:hover {
+  background-color: #ff1e00e0;
+  color: #ffffff;
+  box-shadow: 0px 1px 50px #ff1e00e0;
+}
+
 
 #card-grid {
   margin-top: 20px;

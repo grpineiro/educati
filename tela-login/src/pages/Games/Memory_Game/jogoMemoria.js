@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
 import React, { useState, useEffect } from "react"
+import { Link } from 'react-router-dom'
 
 import "./estiloJogo.css"
 import SingleCard from "./components/SingleCard"
@@ -102,6 +102,7 @@ function JogoMemoria() {
           />
         ))}
       </div>
+      <Link to="/home"><button id="btn_retornar">Voltar</button></Link>
       <button id="btn_novo_jogo" onClick={shuffleCards}>Novo Jogo</button>
       
     </div>

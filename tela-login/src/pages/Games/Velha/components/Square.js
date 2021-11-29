@@ -12,8 +12,6 @@ export default function Square({ value, index }) {
     isXNext,
     setIsXNext,
     whoIsWinner,
-    history,
-    setHistory,
   } = useContext(GameContext);
 
   function handleClick() {
@@ -24,15 +22,6 @@ export default function Square({ value, index }) {
     newSquares[index] = isXNext ? 'X' : 'O';
     setSquares(newSquares);
     setIsXNext(!isXNext);
-
-    setHistory([
-      ...history,
-      {
-        squares: [...squares],
-        isXNext,
-        whoIsWinner,
-      },
-    ]);
   }
 
   return (

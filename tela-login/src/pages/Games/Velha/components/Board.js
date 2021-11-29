@@ -1,4 +1,5 @@
 import { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 // import uuid from 'uuid/v4';
 
 import { GameContext } from "../context/GameContext";
@@ -7,7 +8,6 @@ import Square from './Square';
 import Player from './Player';
 import Reset from './Reset';
 import Winner from './Winner';
-import History from './History';
 
 function calculateWinner(squares) {
   const lines = [
@@ -30,7 +30,7 @@ function calculateWinner(squares) {
 }
 
 export default function Board() {
-  const { squares, setWhoIsWinner, history } = useContext(GameContext);
+  const { squares, setWhoIsWinner } = useContext(GameContext);
 
   useEffect(() => {
     const winner = calculateWinner(squares);
@@ -38,20 +38,23 @@ export default function Board() {
     if (winner) {
       setWhoIsWinner(winner);
     }
-  }, [history, setWhoIsWinner, squares]);
+  }, [setWhoIsWinner, squares]);
 
   return (
-    <div className="board-container">
+   <div id="container_app_global">
+    <div className="board-container" id="board-container">
       <Player />
       <Winner />
       <Reset />
-      <div className="board">
+      <div className="board" id="board">
         {squares.map((value, index) => (
           <Square value={value} index={index} key={`${Math.random()}`} />
         ))}
       </div>
 
-      <History />
+      <br />
+      <Link to="/home"><button type="button" className="btn btn-danger btn-lg active" >Voltar</button></Link>      
     </div>
+    </div> 
   );
 }

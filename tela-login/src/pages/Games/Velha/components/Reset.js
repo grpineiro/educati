@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { GameContext } from '../context/GameContext';
 
 export default function Board() {
-  const { setSquares, setIsXNext, setWhoIsWinner, setHistory } = useContext(
+  const { setSquares, setIsXNext, setWhoIsWinner } = useContext(
     GameContext
   );
 
@@ -11,13 +11,12 @@ export default function Board() {
     setSquares(Array(9).fill(null));
     setIsXNext(true);
     setWhoIsWinner('');
-    setHistory([]);
   }
 
   return (
-    <p className="reset">
+    <p className="reset" id="reset">
       <button type="button" onClick={handleClick}>
-        Reset
+        Reiniciar
       </button>
     </p>
   );
