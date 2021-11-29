@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+  /* Principal */
+  #sobre {
+    background-color: #8BE3FF;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    color: #000000;
+  }
+
+  /* Icons */
+  #Img_Sun_Sobre {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 160px;
+    height: 130px;
+  }
+
+  #Img_Cloud_Sobre {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 90px;
+    height: 60px;
+  }
+
+  #Img_Cloud_Sobre_2 {
+    position: absolute;
+    right: 15px;
+    bottom: 50px;
+    width: 90px;
+    height: 60px;
+  }
+
+  .Img_Arrow_Sobre {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    width: 50px;
+    height: 32px;
+  }
+
+  /* Title */
+  .sobreTitle {
+    position: absolute;
+    font-family: 'Lilita One';
+    font-size: 50px;
+    color: #000000;
+    text-shadow: -6px 4px 7px rgba(0, 0, 0, 0.356);
+    top: 95px;
+  }
+
+  /* Text Area */
+  div.Area_About_Us_Sobre {
+    position: absolute;
+    top: 180px;
+    width: 250px;
+    height: 20px;
+  }
+
+  .About_Us_Sobre {
+    font-family: 'Inter', sans-serif;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  .About_Us_Sobre2 {
+    font-family: 'Inter', sans-serif;
+    text-align: justify;
+    font-weight: 500;
+    font-size: 13px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  /* Icons */
+  #Img_Sun_Sobre {
+    width: 230px;
+    height: 180px;
+  }
+
+  #Img_Cloud_Sobre {
+    width: 125px;
+    height: 75px;
+  }
+
+  #Img_Cloud_Sobre_2 {
+    right: 30px;
+    bottom: 70px;
+    width: 125px;
+    height: 75px;
+  }
+
+  .Img_Arrow_Sobre {
+    bottom: 38px;
+    left: 33px;
+  }
+
+  /* Title */
+  .sobreTitle {
+    font-size: 65px;
+    top: 130px;
+  }
+
+  /* Text Area */
+  div.Area_About_Us_Sobre {
+    top: 260px;
+    width: 400px;
+    height: 40px;
+  }
+
+  .About_Us_Sobre {
+    font-size: 18px;
+  }
+
+  .About_Us_Sobre2 {
+    font-size: 18px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  /* Icons */
+  #Img_Sun_Sobre {
+    width: 300px;
+    height: 240px;
+  }
+
+  #Img_Cloud_Sobre {
+    left: 40px;
+    top: 30px;
+    width: 180px;
+    height: 100px;
+  }
+
+  #Img_Cloud_Sobre_2 {
+    right: 70px;
+    bottom: 110px;
+    width: 180px;
+    height: 100px;
+  }
+
+  .Img_Arrow_Sobre {
+    bottom: 48px;
+    left: 36px;
+    width: 110px;
+    height: 60px;
+  }
+
+  /* Title */
+  .sobreTitle {
+    font-size: 80px;
+    top: 120px;
+  }
+
+  /* Text Area */
+  div.Area_About_Us_Sobre {
+    top: 260px;
+    width: 620px;
+    height: 60px;
+  }
+
+  .About_Us_Sobre {
+    font-size: 21px;
+  }
+
+  .About_Us_Sobre2 {
+    font-size: 21px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  /* Icons */
+  #Img_Sun_Sobre {
+    width: 430px;
+    height: 330px;
+  }
+
+  #Img_Cloud_Sobre {
+    left: 50px;
+    top: 35px;
+    width: 195px;
+    height: 105px;
+  }
+
+  #Img_Cloud_Sobre_2 {
+    right: 40px;
+    bottom: 90px;
+    width: 195px;
+    height: 105px;
+  }
+
+  .Img_Arrow_Sobre {
+    bottom: 40px;
+    left: 40px;
+    width: 120px;
+    height: 60px;
+  }
+
+  /* Title */
+  .sobreTitle {
+    font-size: 100px;
+    top: 100px;
+  }
+
+  /* Text Area */
+  div.Area_About_Us_Sobre {
+    top: 265px;
+    width: 750px;
+    height: 300px;
+  }
+
+  .About_Us_Sobre {
+    font-size: 24px;
+  }
+
+  .About_Us_Sobre2 {
+    font-size: 24px;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  /* Icons */
+  #Img_Cloud_Sobre {
+    left: 70px;
+    top: 30px;
+    width: 220px;
+    height: 120px;
+  }
+
+  #Img_Cloud_Sobre_2 {
+    right: 50px;
+    bottom: 70px;
+    width: 220px;
+    height: 120px;
+  }
+
+  .Img_Arrow_Sobre {
+    bottom: 40px;
+    left: 33px;
+  }
+
+  /* Title */
+  .sobreTitle {
+    top: 80px;
+  }
+
+  /* Text Area */
+  div.Area_About_Us_Sobre {
+    top: 255px;
+    width: 890px;
+  }
+
+  .About_Us_Sobre {
+    font-size: 26px;
+  }
+
+  .About_Us_Sobre2 {
+    font-size: 26px;
+  }
+}
+
+/* Other Devices - Full HD, 4K */
+@media only screen and (min-width : 1800px) {
+  /* Icons */  
+  #Img_Cloud_Sobre {
+    left: 70px;
+    top: 30px;
+    width: 280px;
+    height: 150px;
+  }
+  
+  #Img_Cloud_Sobre_2 {
+    right: 70px;
+    bottom: 70px;
+    width: 250px;
+    height: 130px;
+  }
+  
+  .Img_Arrow_Sobre {
+    bottom: 34px;
+    left: 63px;
+    width: 170px;
+    height: 95px;
+  }
+  
+  /* Title */
+  .sobreTitle {
+    font-size: 120px;
+    top: 60px;
+  }
+  
+  /* Text Area */
+  div.Area_About_Us_Sobre {
+    top: 270px;
+    width: 1300px;
+  }
+  
+  .About_Us_Sobre {
+    font-size: 32px;
+  }
+
+  .About_Us_Sobre2 {
+    font-size: 32px;
+  }
+}

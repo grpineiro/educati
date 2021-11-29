@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lilita+One&family=Lobster&display=swap');
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+  /* Geral Navbar */
+  #Navbar_Perfil {
+    background-color: #8be4ff;
+    font-family: 'Lobster', cursive;
+    padding-top: 0em;
+    padding-bottom: 0em;
+  }
+
+  /* User Image */
+  #Img_Perfil {
+    width: 120px;
+    height: 130px;
+  }
+
+  /* Login User Name */
+  #Name_Perfil {
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  /* Star counter in Navbar */
+  #Total_Stars_Perfil {
+    font-size: 20px;
+  }
+
+  /* Separation between Name and Stars and Home and Profile Buttons */
+  .Area_Name_Points_Perfil {
+    padding-right: 20px;
+    border-right: 2px solid #000000;
+  }
+
+  /* Home Button Icon in Navbar */
+  #icon_Home_Perfil {
+    font-size: 70px;
+    padding-right: 7px;
+  }
+
+  /* Home Button */
+  #Opt_Home_Perfil {
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+  }
+
+  /* Profile Button Icon in Navbar */
+  #icon_Perfil {
+    font-size: 60px;
+    padding-right: 5px;
+  }
+
+  /* Profile Button */
+  #Opt_Perfil {
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    background-color: rgba(196, 196, 196, 0.5);
+  }
+
+  /* Navbar: when hovering over the Home Button. */
+  #Opt_Home_Perfil:hover {
+    background-color: rgba(196, 196, 196, 0.2);
+  }
+
+  /* Navbar: by clicking the Home Button. */
+  #Opt_Home_Perfil:active  {
+    width: 170px;
+    height: 130px;
+    border-top: 3px solid #000000;
+    border-right: 3px solid #000000;
+    border-bottom: 1px solid #000000;
+  }
+
+  /* Quit Button Icon in Navbar */
+  #icon_Exit_Perfil {
+    font-size: 60px;
+    padding-right: 7px;
+  }
+
+  /* Quit Button */
+  #Opt_Quit_Perfil {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+  }
+
+  /* Navbar: when hovering over the Quit Button. */
+  #Opt_Quit_Perfil:hover {
+    width: 180px;
+    height: 130px;
+    background-color: rgba(255, 0, 0, 0.473);
+  }
+
+  /* Navbar: by clicking the Quit Button. */
+  #Opt_Quit_Perfil:active {
+    width: 180px;
+    height: 130px;
+    border-top: 3px solid #000000;
+    border-left: 3px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: red;
+  }
+  /* End NavBar CSS */
+
+  /* Div for separation between NavBar and Profile Items */
+  .forBlueDiv_Perfil {
+    display: none;
+  }
+
+  /* User Image for Edit */
+  #Img_Perfil2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 30px;
+  }
+
+  /* Edit icon (camera) */
+  #Icon_edit_Perfil {
+    position: absolute;
+    top: 130px;
+    left: 250Ípx;
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Username */
+  #Name_Perfil2 {
+    position: absolute;
+    font-family: 'Lobster', cursive;
+    padding-top: 100px;
+    padding-left: 208px;
+    font-size: 28px;
+  }
+
+  /* Div for Line Separation between Perfil Editor and Perfil Data */
+  .separationBar {
+    position: absolute;
+    width: 611px;
+    left: -20px;
+    top: 578px;
+    border: 1px solid #000000;
+    transform: rotate(90deg);
+  }
+
+  /* Perfil Data */
+  #Perfil_Data {
+    position: absolute;
+    top: 40px;
+    right: 375px;
+  }
+
+  /* E-mail Title */
+  #emailTitle_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 310px;
+    left: -1060px;
+  }
+
+  /* E-mail Text */
+  #email_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 310px;
+    left: -288px;
+  }
+
+  /* Div for Line Separation between Data */
+  .separationBar1_data {
+    position: absolute;
+    width: 1633px;
+    left: -1258px;
+    top: 405px;
+    border: 1px solid #000000;
+    transform: rotate(180deg);
+  }
+
+  /* Birthday Title */
+  #birthdayTitle_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 450px;
+    left: -1060px;
+  }
+
+  /* Birthday Text */
+  #birthday_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 450px;
+    left: -75px;
+  }
+
+  /* Div for Line Separation between Data */
+  .separationBar2_data {
+    position: absolute;
+    width: 1633px;
+    left: -1258px;
+    top: 550px;
+    border: 1px solid #000000;
+    transform: rotate(180deg);
+  }
+
+  /* Total Stars Title */
+  #TotalStarsTitle_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 580px;
+    left: -1060px;
+  }
+
+  /* Total Stars Text */
+  #TotalStars_Data_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 580px;
+    left: 30px;
+  }
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) { }
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) { }
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  /* Geral Navbar */
+  #Navbar_Perfil {
+    background-color: white;
+  }
+
+  /* User Image */
+  #Img_Perfil {
+    width: 120px;
+    height: 130px;
+  }
+
+  /* Login User Name */
+  #Name_Perfil {
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  /* Star counter in Navbar */
+  #Total_Stars_Perfil {
+    font-size: 20px;
+  }
+
+  /* Separation between Name and Stars and Home and Profile Buttons */
+  .Area_Name_Points_Perfil {
+    padding-right: 20px;
+    border-right: 2px solid #000000;
+  }
+
+  /* Home Button Icon in Navbar */
+  #icon_Home_Perfil {
+    font-size: 70px;
+    padding-right: 7px;
+  }
+
+  /* Home Button */
+  #Opt_Home_Perfil {
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+  }
+
+  /* Profile Button Icon in Navbar */
+  #icon_Perfil {
+    font-size: 60px;
+    padding-right: 5px;
+  }
+
+  /* Profile Button */
+  #Opt_Perfil {
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    background-color: rgba(196, 196, 196, 0.5);
+  }
+
+  /* Navbar: when hovering over the Home Button. */
+  #Opt_Home_Perfil:hover {
+    background-color: rgba(196, 196, 196, 0.2);
+  }
+
+  /* Navbar: by clicking the Home Button. */
+  #Opt_Home_Perfil:active  {
+    width: 170px;
+    height: 130px;
+    border-top: 3px solid #000000;
+    border-right: 3px solid #000000;
+    border-bottom: 1px solid #000000;
+  }
+
+  /* Quit Button Icon in Navbar */
+  #icon_Exit_Perfil {
+    font-size: 60px;
+    padding-right: 7px;
+  }
+
+  /* Quit Button */
+  #Opt_Quit_Perfil {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+  }
+
+  /* Navbar: when hovering over the Quit Button. */
+  #Opt_Quit_Perfil:hover {
+    width: 180px;
+    height: 130px;
+    background-color: rgba(255, 0, 0, 0.473);
+  }
+
+  /* Navbar: by clicking the Quit Button. */
+  #Opt_Quit_Perfil:active {
+    width: 180px;
+    height: 130px;
+    border-top: 3px solid #000000;
+    border-left: 3px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: red;
+  }
+  /* End NavBar CSS */
+
+  /* Div for separation between NavBar and Profile Items */
+  .forBlueDiv_Perfil {
+    display: revert;
+    background-color: #8be4ff;
+    height: 5em;
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 3px 0;
+    box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+  }
+
+  /* Left Side: Profile Editor */
+  /* User Image for Edit */
+  #Img_Perfil2 {
+    width: 160px;
+    height: 160px;
+    left: 60px;
+  }
+
+  /* Edit icon (camera) */
+  #Icon_edit_Perfil {
+    position: absolute;
+    left: 160px;
+    top: 390px;
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Username */
+  #Name_Perfil2 {
+    padding-top: 165px;
+    padding-left: 2px;
+    font-size: 40px;
+  }
+
+  /* Div for Line Separation between Perfil Editor and Perfil Data */
+  .separationBar {
+    position: absolute;
+    width: 611px;
+    left: -20px;
+    top: 578px;
+    border: 1px solid #000000;
+    transform: rotate(90deg);
+  }
+
+  /* Perfil Data */
+  #Perfil_Data {
+    position: absolute;
+    top: 40px;
+    right: 375px;
+  }
+
+  /* E-mail Title */
+  #emailTitle_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 310px;
+    left: -1060px;
+  }
+
+  /* E-mail Text */
+  #email_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 310px;
+    left: -288px;
+  }
+
+  /* Div for Line Separation between Data */
+  .separationBar1_data {
+    position: absolute;
+    width: 1633px;
+    left: -1258px;
+    top: 405px;
+    border: 1px solid #000000;
+    transform: rotate(180deg);
+  }
+
+  /* Birthday Title */
+  #birthdayTitle_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 450px;
+    left: -1060px;
+  }
+
+  /* Birthday Text */
+  #birthday_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 450px;
+    left: -75px;
+  }
+
+  /* Div for Line Separation between Data */
+  .separationBar2_data {
+    position: absolute;
+    width: 1633px;
+    left: -1258px;
+    top: 550px;
+    border: 1px solid #000000;
+    transform: rotate(180deg);
+  }
+
+  /* Total Stars Title */
+  #TotalStarsTitle_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 580px;
+    left: -1060px;
+  }
+
+  /* Total Stars Text */
+  #TotalStars_Data_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 580px;
+    left: 30px;
+  }
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) { }
+/* Other Devices - Full HD, 4K */
+@media only screen and (min-width : 1800px) {
+  /* User Image */
+  #Img_Perfil {
+    width: 120px;
+    height: 130px;
+  }
+
+  /* Login User Name */
+  #Name_Perfil {
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  /* Star counter in Navbar */
+  #Total_Stars_Perfil {
+    font-size: 20px;
+  }
+
+  /* Separation between Name and Stars and Home and Profile Buttons */
+  .Area_Name_Points_Perfil {
+    padding-right: 20px;
+    border-right: 2px solid #000000;
+  }
+
+  /* Home Button Icon in Navbar */
+  #icon_Home_Perfil {
+    font-size: 70px;
+    padding-right: 7px;
+  }
+
+  /* Home Button */
+  #Opt_Home_Perfil {
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+  }
+
+  /* Profile Button Icon in Navbar */
+  #icon_Perfil {
+    font-size: 60px;
+    padding-right: 5px;
+  }
+
+  /* Profile Button */
+  #Opt_Perfil {
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    background-color: rgba(196, 196, 196, 0.5);
+  }
+
+  /* Navbar: when hovering over the Home Button. */
+  #Opt_Home_Perfil:hover {
+    background-color: rgba(196, 196, 196, 0.2);
+  }
+
+  /* Navbar: by clicking the Home Button. */
+  #Opt_Home_Perfil:active  {
+    width: 170px;
+    height: 130px;
+    border-top: 3px solid #000000;
+    border-right: 3px solid #000000;
+    border-bottom: 1px solid #000000;
+  }
+
+  /* Quit Button Icon in Navbar */
+  #icon_Exit_Perfil {
+    font-size: 60px;
+    padding-right: 7px;
+  }
+
+  /* Quit Button */
+  #Opt_Quit_Perfil {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+  }
+
+  /* Navbar: when hovering over the Quit Button. */
+  #Opt_Quit_Perfil:hover {
+    width: 180px;
+    height: 130px;
+    background-color: rgba(255, 0, 0, 0.473);
+  }
+
+  /* Navbar: by clicking the Quit Button. */
+  #Opt_Quit_Perfil:active {
+    width: 180px;
+    height: 130px;
+    border-top: 3px solid #000000;
+    border-left: 3px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: red;
+  }
+  /* End NavBar CSS */
+
+  /* Left Side: Profile Editor */
+  /* User Image for Edit */
+  #Img_Perfil2 {
+    width: 160px;
+    height: 160px;
+    left: 60px;
+  }
+
+  /* Edit icon (camera) */
+  #Icon_edit_Perfil {
+    position: absolute;
+    left: 160px;
+    top: 390px;
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Username */
+  #Name_Perfil2 {
+    padding-top: 185px;
+    padding-left: 2px;
+    font-size: 40px;
+  }
+
+  /* Div for Line Separation between Perfil Editor and Perfil Data */
+  .separationBar {
+    position: absolute;
+    width: 611px;
+    left: -20px;
+    top: 578px;
+    border: 1px solid #000000;
+    transform: rotate(90deg);
+  }
+
+  /* Perfil Data */
+  #Perfil_Data {
+    position: absolute;
+    top: 40px;
+    right: 375px;
+  }
+
+  /* E-mail Title */
+  #emailTitle_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 310px;
+    left: -1060px;
+  }
+
+  /* E-mail Text */
+  #email_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 310px;
+    left: -360px;
+  }
+
+  /* Div for Line Separation between Data */
+  .separationBar1_data {
+    position: absolute;
+    width: 1633px;
+    left: -1258px;
+    top: 405px;
+    border: 1px solid #000000;
+    transform: rotate(180deg);
+  }
+
+  /* Birthday Title */
+  #birthdayTitle_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 450px;
+    left: -1060px;
+  }
+
+  /* Birthday Text */
+  #birthday_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 450px;
+    left: -185px;
+  }
+
+  /* Div for Line Separation between Data */
+  .separationBar2_data {
+    position: absolute;
+    width: 1633px;
+    left: -1258px;
+    top: 550px;
+    border: 1px solid #000000;
+    transform: rotate(180deg);
+  }
+
+  /* Total Stars Title */
+  #TotalStarsTitle_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 580px;
+    left: -1060px;
+  }
+
+  /* Total Stars Text */
+  #TotalStars_Data_Perfil {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 50px;
+    top: 580px;
+    left: -115px;
+  }
+}

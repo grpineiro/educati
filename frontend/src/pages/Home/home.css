@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lilita+One&family=Lobster&display=swap');
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+  /* Geral Navbar */
+  #Navbar_Home {
+    background-color: #8be4ff;
+    font-family: 'Lobster', cursive;
+    padding-top: 0em;
+    padding-bottom: 0em;
+  }
+  
+  /* User Image */
+  #Img_User_Home {
+    width: 120px;
+    height: 130px;
+  }
+
+  /* Login User Name */
+  #Name_User_Home {
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  /* Star counter in Navbar */
+  #Total_Stars_User_Home {
+    font-size: 20px;
+  }
+
+  /* Separation between Name and Stars and Home and Profile Buttons */
+  .Area_Name_Points_User_Home {
+    padding-right: 20px;
+  }
+
+  /* Home Button Icon in Navbar */
+  #icon_Home {
+    font-size: 70px;
+    padding-right: 7px;
+  }
+
+  /* Home Button */
+  #Opt_Home {
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    background-color: rgba(196, 196, 196, 0.5);
+  }
+
+  /* Navbar: when hovering over the Profile Button. */
+  #Opt_Perfil_Home:hover {
+    background-color: rgba(196, 196, 196, 0.2);
+  }
+
+  /* Navbar: by clicking the Profile Button. */
+  #Opt_Perfil_Home:active  {
+    width: 170px;
+    height: 130px;
+    border-top: 3px solid #000000;
+    border-right: 3px solid #000000;
+    border-bottom: 1px solid #000000;
+  }
+
+  /* Profile Button Icon in Navbar */
+  #icon_Perfil_Home {
+    font-size: 60px;
+    padding-right: 5px;
+  }
+
+  /* Profile Button */
+  #Opt_Perfil_Home {
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+  }
+
+  /* Quit Button Icon in Navbar */
+  #icon_Exit_Home {
+    display: none;
+    font-size: 60px;
+    padding-right: 7px;
+  }
+
+  /* Quit Button */
+  #Opt_Quit_Home {
+    position: absolute;
+    font-family: 'Lobster', cursive;
+    top: 0px;
+    right: 0px;
+    font-size: 12px;
+    height: 40px;
+    width: 60px;
+    line-height: 3;
+  }
+
+  /* Navbar: when hovering over the Quit Button. */
+  #Opt_Quit_Home:hover {
+    width: 40px;
+    height: 60px;
+    background-color: rgba(255, 0, 0, 0.473);
+  }
+
+  /* Navbar: by clicking the Quit Button. */
+  #Opt_Quit_Home:active {
+    width: 180px;
+    height: 130px;
+    border-top: 3px solid #000000;
+    border-left: 3px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: red;
+  }
+
+  /* Div for separation between NavBar and Home Items */
+  .forBlueDiv_Home {
+    display: none;
+  }
+
+  #quadrante1 {
+    background-image: url("../../images/previa_Velha.jpg");
+    border-top: 3px solid #000000;
+    border-left: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+    border-right: 3px solid #000000;
+    font-size: 25px;
+  }
+
+  #text_q1 {
+    font-family: 'Lobster', cursive;
+  }
+
+  #quadrante2 {
+    background-image: url("../../images/previa_Memoria.jpg");
+    border-top: 3px solid #000000;
+    border-left: 3px solid #000000;
+    border-bottom: 3px solid #000000;
+    border-right: 3px solid #000000;
+    font-size: 25px;
+  }
+
+  #text_q2 {
+    font-family: 'Lobster', cursive;
+  }
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) { }
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) { }
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  /* Geral Navbar */ /* <- FIRST */
+  #Navbar_Home {
+    background-color: white;
+  }
+
+  /* User Image */
+  #Img_User_Home {
+    width: 120px;
+    height: 130px;
+  }
+
+  /* Login User Name */
+  #Name_User_Home {
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  /* Star counter in Navbar */
+  #Total_Stars_User_Home {
+    font-size: 20px;
+  }
+
+  /* Separation between Name and Stars and Home and Profile Buttons */
+  .Area_Name_Points_User_Home {
+    padding-right: 20px;
+  }
+
+  /* Home Button Icon in Navbar */
+  #icon_Home {
+    font-size: 70px;
+    padding-right: 7px;
+  }
+
+  /* Home Button */
+  #Opt_Home {
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+    border-left: 2px solid #000000;
+    border-right: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    background-color: rgba(196, 196, 196, 0.5);
+  }
+
+  /* Navbar: when hovering over the Profile Button. */
+  #Opt_Perfil_Home:hover {
+    background-color: rgba(196, 196, 196, 0.2);
+  }
+
+  /* Navbar: by clicking the Profile Button. */
+  #Opt_Perfil_Home:active  {
+    width: 170px;
+    height: 130px;
+    border-top: 3px solid #000000;
+    border-right: 3px solid #000000;
+    border-bottom: 1px solid #000000;
+  }
+
+  /* Profile Button Icon in Navbar */
+  #icon_Perfil_Home {
+    font-size: 60px;
+    padding-right: 5px;
+  }
+
+  /* Profile Button */
+  #Opt_Perfil_Home {
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+  }
+
+  /* Quit Button Icon in Navbar */
+  #icon_Exit_Home {
+    display: revert;
+    font-size: 60px;
+    padding-right: 7px;
+  }
+
+  /* Quit Button */
+  #Opt_Quit_Home {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 35px;
+    height: 130px;
+    width: 180px;
+    line-height: 3;
+  }
+
+  /* Navbar: when hovering over the Quit Button. */
+  #Opt_Quit_Home:hover {
+    font-size: 35px;
+    width: 180px;
+    height: 130px;
+    background-color: rgba(255, 0, 0, 0.473);
+  }
+
+  /* Navbar: by clicking the Quit Button. */
+  #Opt_Quit_Home:active {
+    width: 180px;
+    height: 130px;
+    border-top: 3px solid #000000;
+    border-left: 3px solid #000000;
+    border-bottom: 1px solid #000000;
+    background-color: red;
+  }
+
+  /* Div for separation between NavBar and Home Items */ /* <- LAST */
+  .forBlueDiv_Home {
+    display: revert;
+    background-color: #8be4ff;
+    height: 5em;
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 3px 0;
+    box-shadow: inset 0 0.5em 1.5em rgb(0 0 0 / 10%), inset 0 0.125em 0.5em rgb(0 0 0 / 15%);
+  }
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) { }
+/* Other Devices - Full HD, 4K */
+@media only screen and (min-width : 1800px) { }

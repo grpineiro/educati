@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+#cadastro {
+    background-color: #8BE3FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: black;
+}
+
+/* Responsivity */
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    /* Title */
+    #cadastroTitle {
+        position: absolute;
+        font-family: 'Lilita One';
+        font-size: 70px;
+        color: black;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        top: 30px;
+    }
+
+    /* Form */
+    #nomeCadastro {
+        font-weight: 750;
+        font-size: 18px;
+        outline-width: 0;
+        border: none;
+        border-bottom: 1px solid black;
+        margin-bottom: 5px;
+    }
+
+    #sobrenomeCadastro {
+        font-weight: 750;
+        font-size: 18px;
+        outline-width: 0;
+        border: none;
+        border-bottom: 1px solid black;
+        margin-bottom: 5px;
+    }
+
+    #emailCadastro {
+        font-weight: 750;
+        font-size: 18px;
+        outline-width: 0;
+        border: none;
+        border-bottom: 1px solid black;
+        margin-bottom: 5px;
+    }
+
+    #passwordCadastro {
+        font-weight: 750;
+        font-size: 18px;
+        outline-width: 0;
+        border: none;
+        border-bottom: 1px solid black;
+        margin-bottom: 5px;
+    }
+
+    #confirmPasswordCadastro {
+        font-weight: 750;
+        font-size: 18px;
+        outline-width: 0;
+        border: none;
+        border-bottom: 1px solid black;
+        margin-bottom: 5px;
+    }
+
+    #birthdayCadastro {
+        font-weight: 750;
+        font-size: 18px;
+        outline-width: 0;
+        border: none;
+        border-bottom: 1px solid black;
+        margin-bottom: 90px;
+    }
+
+    /* Button */
+    #cadastro button {
+        position: absolute;
+        background-color: #C6F5FF;
+        color: black;
+        font-weight: 750;
+        font-size: 18px;
+        border: none;
+        border-radius: 12px;
+        outline-width: 0;
+        width: 140px;
+        height: 50px;
+        bottom: 30px;
+        right: 20px;
+    }
+
+    /* Icon */
+    .arrowCadastro {
+        position: absolute;
+        width: 48px;
+        height: 28px;
+        bottom: 30px;
+        left: 30px;
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+    /* Title */
+    #cadastroTitle {
+        font-size: 90px;
+        top: 40px;
+    }
+
+    /* Form */
+    #nomeCadastro {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    #sobrenomeCadastro {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    #emailCadastro {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    #passwordCadastro {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    #confirmPasswordCadastro {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    #birthdayCadastro {
+        font-size: 20px;
+    }
+
+    /* Button */
+    #cadastro button {
+        font-size: 22px;
+        bottom: 50px;
+        right: 60px;
+    }
+
+    /* Icon */
+    .arrowCadastro {
+        width: 60px;
+        height: 40px;
+        bottom: 50px;
+        left: 40px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    /* Form */
+    #nomeCadastro {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    #sobrenomeCadastro {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    #emailCadastro {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    #passwordCadastro {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    #confirmPasswordCadastro {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    #birthdayCadastro {
+        font-size: 22px;
+        margin-bottom: 100px;
+    }
+
+    /* Button */
+    #cadastro button {
+        bottom: 40px;
+        right: 60px;
+    }
+
+    /* Icon */
+    .arrowCadastro {
+        width: 80px;
+        height: 40px;
+        bottom: 40px;
+        left: 40px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    /* Title */
+    #cadastroTitle {
+        font-size: 100px;
+    }
+
+    /* Form */
+    #nomeCadastro {
+        margin-bottom: 30px;
+    }
+
+    #sobrenomeCadastro {
+        margin-bottom: 30px;
+    }
+
+    #emailCadastro {
+        margin-bottom: 30px;
+    }
+
+    #passwordCadastro {
+        margin-bottom: 30px;
+    }
+
+    #confirmPasswordCadastro {
+        margin-bottom: 30px;
+    }
+
+    #birthdayCadastro {
+        margin-bottom: 100px;
+    }
+
+    /* Button */
+    #cadastro button {
+        bottom: 40px;
+        right: 40px;
+    }
+
+    /* Icon */
+    .arrowCadastro {
+        bottom: 40px;
+        left: 60px;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    /* Form */
+    #birthdayCadastro {
+        margin-bottom: 90px;
+    }
+
+    /* Button */
+    #cadastro button {
+        width: 150px;
+        height: 50px;
+        bottom: 40px;
+        right: 50px;
+    }
+
+    /* Icon */
+    .arrowCadastro {
+        width: 90px;
+        height: 50px;
+        bottom: 40px;
+        left: 40px;
+    }
+}
+
+/* Other Devices - Full HD, 4K */
+@media only screen and (min-width : 1800px) {
+    /* Button */
+    #cadastro button {
+        bottom: 30px;
+        right: 60px;
+    }
+
+    /* Icon */
+    .arrowCadastro {
+        bottom: 30px;
+        left: 60px;
+    }
+}
+
+#cadastro-usuario {
+    position: absolute;
+    display: flex;
+    bottom: 0px;
+    right: 0px;
+    background-color: #ffffff;
+    width: 100%;
+    height: 78%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    align-items: center;
+}
+
+#cadastro button:hover {
+    background-color: #DFDFDF;
+    color: #3F3F3F;
+    cursor: pointer;
+}

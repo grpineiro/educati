@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+/* Responsivity */
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    #login {
+        background-color: #8BE3FF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: black;
+    }
+
+    /* Icons */
+    #sunLogin {
+        position: absolute;
+        width: 129px;
+        height: 96px;
+        top: 0px;
+        right: 0px;
+    }
+
+    #cloudLogin1 {
+        position: absolute;
+        width: 85px;
+        height: 50px;
+        top: 10px;
+        left: 10px;
+    }
+    
+    #cloudLogin2 {
+        position: absolute;
+        width: 85px;
+        height: 50px;
+        top: 135px;
+        right: 5px;
+    }
+
+    .aboutLogin {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        bottom: 20px;
+        right: 10px;
+    }
+
+    /* Title */
+    #loginTitle {
+        position: absolute;
+        font-family: 'Lilita One';
+        font-size: 60px;
+        color: white;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        top: 60px;
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+    /* Icons */
+    #sunLogin {
+        width: 229px;
+        height: 206px;
+    }
+    
+    #cloudLogin1 {
+        width: 145px;
+        height: 95px;
+        top: 30px;
+        left: 15px;
+    }
+    
+    #cloudLogin2 {
+        width: 145px;
+        height: 95px;
+        top: 210px;
+        right: 15px;
+    }
+    
+    .aboutLogin {
+        bottom: 15px;
+        right: 20px;
+    }
+
+    /* Title */
+    #loginTitle {
+        font-size: 70px;
+        top: 130px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    /* Icons */
+    #sunLogin {
+        width: 310px;
+        height: 265px;
+    }
+    
+    #cloudLogin1 {
+        width: 195px;
+        height: 125px;
+        top: 25px;
+        left: 25px;
+    }
+    
+    #cloudLogin2 {
+        width: 195px;
+        height: 125px;
+        top: 210px;
+        right: 20px;
+    }
+
+    .aboutLogin {
+        width: 30px;
+        height: 30px;
+        bottom: 30px;
+        right: 30px;
+    }
+
+    /* Title */
+    #loginTitle {
+        font-size: 100px;
+        top: 110px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    /* Icons */
+    #sunLogin {
+        width: 300px;
+        height: 245px;
+    }
+    
+    #cloudLogin1 {
+        width: 225px;
+        height: 135px;
+        top: 25px;
+        left: 25px;
+    }
+    
+    #cloudLogin2 {
+        width: 225px;
+        height: 135px;
+        top: 210px;
+        right: 20px;
+    }
+
+    /* Title */
+    #loginTitle {
+        font-size: 110px;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    /* Icons */    
+    #sunLogin {
+        width: 389px;
+        height: 346px;
+    }
+    
+    #cloudLogin1 {
+        width: 245px;
+        height: 145px;
+        top: 22px;
+        left: 150px;
+    }
+    
+    #cloudLogin2 {
+        width: 245px;
+        height: 145px;
+        top: 230px;
+        right: 150px;
+    }
+    
+    .aboutLogin {
+        bottom: 30px;
+        right: 60px;
+    }
+    
+    /* Title */
+    #loginTitle {
+        font-size: 140px;
+    }
+}
+
+/* Other Devices - Full HD, 4K */
+@media only screen and (min-width : 1800px) {
+    /* Icons */    
+    #sunLogin {
+        width: 439px;
+        height: 396px;
+    }
+    
+    #cloudLogin1 {
+        width: 245px;
+        height: 145px;
+        top: 22px;
+        left: 280px;
+    }
+    
+    #cloudLogin2 {
+        width: 245px;
+        height: 145px;
+        top: 230px;
+        right: 290px;
+    }
+    
+    .aboutLogin {
+        right: 50px;
+    }
+
+    /* Title */
+    #loginTitle {
+        top: 120px;
+    }
+}
+
+/* General Items */
+#inputEmailLogin {
+    display: flex;
+    align-items: center;
+}
+
+#inputEmailLogin svg {
+    font-size: 40px;
+}
+
+#inputEmailLogin input {
+    background-color: #C6F5FF;
+    outline-width: 0;
+    border: none;
+    font-size: 20px;
+    margin-left: 5px;
+    height: 30px;
+}
+
+#inputPasswordLogin {
+    display: flex;
+    align-items: center;
+}
+
+#inputPasswordLogin svg {
+    font-size: 40px;
+}
+
+#inputPasswordLogin input {
+    background-color: #C6F5FF;
+    outline-width: 0;
+    border: none;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: -20px;
+    height: 30px;
+}
+
+#login button {
+    background-color: #C6F5FF;
+    color: black;
+    font-weight: 750;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    font-size: 18px;
+    outline-width: 0;
+    margin: 3px;
+}
+
+#login button:hover {
+    background-color: #DFDFDF;
+    color: #3F3F3F;
+    cursor: pointer;
+}
+
+#login-eye {
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
