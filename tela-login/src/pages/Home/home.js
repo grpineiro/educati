@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -15,6 +15,17 @@ import token_1 from '../../images/token_1.png'
 function Home() {
   const { signOut, user } = useContext(UserContext);
   let navigate = useNavigate();
+  const [hiddenElement, setHiddenElement] = useState(false);
+
+  useEffect(() => {
+    if (user) {
+      user.first_name === "Convidado" || !user.first_name ? setHiddenElement(true) : setHiddenElement(false)
+    }
+    else {
+      setHiddenElement(true)
+    }
+  },[user]);
+  // console.log(user.first_name);
 
   return (
     <div id="home">
@@ -38,7 +49,7 @@ function Home() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/perfil" className="nav-link active" id="Opt_Perfil_Home" aria-current="page">
+                <Link hidden={hiddenElement} to="/perfil" className="nav-link active" id="Opt_Perfil_Home" aria-current="page">
                   <FaRegUserCircle id="icon_Perfil_Home" />
                   Perfil
                 </Link>
