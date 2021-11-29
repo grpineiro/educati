@@ -31,6 +31,7 @@ export default function UserContextProvider({ children }) {
   }
 
   function signOut(callback) {
+    setUser(null);
     localStorage.clear();
     callback();
   }
