@@ -14,7 +14,6 @@ import { UserContext } from "../contexts/user.context";
 
 const Rotas = () => {
   const { signed } = useContext(UserContext);
-  console.log(signed)
 
   function SignInRoute() {
     return (
@@ -28,7 +27,6 @@ const Rotas = () => {
         <Route path="/cadastrar" element={<Cadastro />} />
       </Routes>
     )
-
   }
 
   function SignOutRoute() {
@@ -43,15 +41,11 @@ const Rotas = () => {
         <Route path="/games/memoria" element={<JogoMemoria />} />
       </Routes>
     )
-
   }
 
   return (
     signed ? <SignInRoute /> : <SignOutRoute />
-
   )
-
-  // return routes;
 }
 
 export default Rotas;

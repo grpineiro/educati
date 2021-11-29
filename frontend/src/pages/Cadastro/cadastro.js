@@ -14,7 +14,6 @@ function Cadastro() {
     const navigate = useNavigate();
 
     function submitBody(evt) {
-        console.log(values);
         uploadData();
     }
 

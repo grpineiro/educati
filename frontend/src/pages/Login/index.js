@@ -22,9 +22,6 @@ function Login() {
 
   const { signed, user, signIn, signGuest } = useContext(UserContext);
 
-  console.log(signed);
-  console.log(user);
-
   function uploadData() {
     fetch('http://localhost:3333/auth/user', {
       method: 'POST',
@@ -40,7 +37,6 @@ function Login() {
   const handleClick = (evt) => {
     evt.preventDefault();
     uploadData();
-    console.log(values);
   }
 
   return (

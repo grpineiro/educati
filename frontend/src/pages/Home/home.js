@@ -25,7 +25,6 @@ function Home() {
       setHiddenElement(true)
     }
   }, [user]);
-  // console.log(user.first_name);
 
   return (
     <div id="home">
