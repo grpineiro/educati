@@ -603,7 +603,7 @@
 
   /* Username */
   #Name_Perfil2 {
-    padding-top: 165px;
+    padding-top: 185px;
     padding-left: 2px;
     font-size: 40px;
   }
@@ -640,7 +640,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 50px;
     top: 310px;
-    left: -288px;
+    left: -360px;
   }
 
   /* Div for Line Separation between Data */
@@ -668,7 +668,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 50px;
     top: 450px;
-    left: -75px;
+    left: -185px;
   }
 
   /* Div for Line Separation between Data */
@@ -696,6 +696,6 @@
     font-family: 'Inter', sans-serif;
     font-size: 50px;
     top: 580px;
-    left: 30px;
+    left: -115px;
   }
 }

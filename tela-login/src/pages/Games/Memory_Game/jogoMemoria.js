@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom'
 import "./estiloJogo.css"
 import SingleCard from "./components/SingleCard"
 
-import face1 from './imgs/Face1.jpg'
-
-
 const cardImg = [
   { src: "../imgs/Face1.jpg", matched: false },
   { src: "../imgs/Face2.jpg", matched: false },
@@ -83,29 +80,25 @@ function JogoMemoria() {
   }, []);
 
   return (
-  <div id="container_envelop">  
-    <div id="Memoria_container">
-      <h1 id="Titulo_jogo">Jogo da memória</h1>
-
-      <p id="p_Jogadas">Jogadas: {turns}</p>
-      <p id="p_Estrelas_Conquistadas">Estrelas conquistadas: {'\u2B50'} {stars}</p>
-
-      <div id="card-grid">
-
-        {cards.map((card) => (
-          <SingleCard
-            key={card.id}
-            card={card}
-            handleChoice={handleChoice}
-            flipped={card === choiceOne || card === choiceTwo || card.matched}
-            disabled={disabled}
-          />
-        ))}
+    <div id="container_envelop">
+      <div id="Memoria_container">
+        <h1 id="Titulo_jogo">Jogo da memória</h1>
+        <p id="p_Jogadas">Jogadas: {turns}</p>
+        <p id="p_Estrelas_Conquistadas">Estrelas conquistadas: {'\u2B50'} {stars}</p> 
+        <div id="card-grid">
+          {cards.map((card) => (
+            <SingleCard
+              key={card.id}
+              card={card}
+              handleChoice={handleChoice}
+              flipped={card === choiceOne || card === choiceTwo || card.matched}
+              disabled={disabled}
+            />
+          ))}
+        </div>
+        <Link to="/home"><button id="btn_retornar">Voltar</button></Link>
+        <button id="btn_novo_jogo" onClick={shuffleCards}>Novo Jogo</button>
       </div>
-      <Link to="/home"><button id="btn_retornar">Voltar</button></Link>
-      <button id="btn_novo_jogo" onClick={shuffleCards}>Novo Jogo</button>
-      
-    </div>
     </div>
   );
 }

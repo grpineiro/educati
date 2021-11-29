@@ -17,8 +17,6 @@ import useForm from '../../hooks/useForm'
 
 function Login() {
   const [{ values }, handleChange, handleSubmit] = useForm();
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
   const [show, setShow] = useState(false)
   let navigate = useNavigate();
 
@@ -43,7 +41,6 @@ function Login() {
     evt.preventDefault();
     uploadData();
     console.log(values);
-    //signIn(content, () => navigate("/home"));
   }
 
   return (

@@ -7,11 +7,10 @@ import Sobre from "./Sobre/sobre"
 import Perfil from "./Perfil/perfil"
 import Home from "./Home/home"
 
-import Memoria from "./Games/Memory_Game/jogoMemoria"
 import Velha from "./Games/Velha";
+import JogoMemoria from "./Games/Memory_Game/jogoMemoria"
 
 import { UserContext } from "../contexts/user.context";
-import JogoMemoria from "./Games/Memory_Game/jogoMemoria"
 
 const Rotas = () => {
   const { signed } = useContext(UserContext);

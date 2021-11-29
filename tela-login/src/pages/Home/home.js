@@ -11,8 +11,6 @@ import { ImExit } from 'react-icons/im'
 import { UserContext } from '../../contexts/user.context'
 
 import token_1 from '../../images/token_1.png'
-import jogo_velha from '../../images/previa_Velha.jpg'
-import jogo_memoria from '../../images/previa_Memoria.jpg'
 
 function Home() {
   const { signOut, user } = useContext(UserContext);
@@ -26,7 +24,7 @@ function Home() {
     else {
       setHiddenElement(true)
     }
-  },[user]);
+  }, [user]);
   // console.log(user.first_name);
 
   return (

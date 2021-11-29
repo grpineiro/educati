@@ -1,12 +1,11 @@
 import { createContext, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import t from 'prop-types';
 
 export const UserContext = createContext({});
 
 export default function UserContextProvider({ children }) {
   const [user, setUser] = useState(null);
- 
+
   useEffect(() => {
     function loadStorage() {
       const storageUser = localStorage.getItem("@RJSAuth:user");
@@ -42,7 +41,6 @@ export default function UserContextProvider({ children }) {
 
     callback();
   }
-
 
   return (
     <UserContext.Provider value={{ signed: !!user, user, signIn, signOut, signGuest }}>

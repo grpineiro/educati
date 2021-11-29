@@ -9,12 +9,11 @@ import useForm from '../../hooks/useForm';
 import { UserContext } from '../../contexts/user.context'
 
 function Cadastro() {
-    const [{ values, loading }, handleChange, handleSubmit] = useForm();
+    const [{ values }, handleChange, handleSubmit] = useForm();
     const { signIn } = useContext(UserContext);
     const navigate = useNavigate();
 
     function submitBody(evt) {
-        // evt.preventDefault();
         console.log(values);
         uploadData();
     }
