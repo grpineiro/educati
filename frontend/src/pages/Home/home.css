@@ -80,6 +80,7 @@
 
   /* Quit Button Icon in Navbar */
   #icon_Exit_Home {
+    display: none;
     font-size: 60px;
     padding-right: 7px;
   }
@@ -87,18 +88,19 @@
   /* Quit Button */
   #Opt_Quit_Home {
     position: absolute;
+    font-family: 'Lobster', cursive;
     top: 0px;
     right: 0px;
-    font-size: 35px;
-    height: 130px;
-    width: 180px;
+    font-size: 12px;
+    height: 40px;
+    width: 60px;
     line-height: 3;
   }
 
   /* Navbar: when hovering over the Quit Button. */
   #Opt_Quit_Home:hover {
-    width: 180px;
-    height: 130px;
+    width: 40px;
+    height: 60px;
     background-color: rgba(255, 0, 0, 0.473);
   }
 
@@ -224,6 +226,7 @@
 
   /* Quit Button Icon in Navbar */
   #icon_Exit_Home {
+    display: revert;
     font-size: 60px;
     padding-right: 7px;
   }
@@ -241,6 +244,7 @@
 
   /* Navbar: when hovering over the Quit Button. */
   #Opt_Quit_Home:hover {
+    font-size: 35px;
     width: 180px;
     height: 130px;
     background-color: rgba(255, 0, 0, 0.473);

@@ -53,16 +53,15 @@ function Home() {
                   Perfil
                 </Link>
               </li>
-              <li className="nav-item">
-                <button onClick={() => signOut(() => navigate("/"))} className="nav-link active" id="Opt_Quit_Home" aria-current="page">
-                  <ImExit id="icon_Exit_Home" />
-                  Sair
-                </button>
-              </li>
             </ul>
           </div>
         </div>
       </nav>
+
+      <button onClick={() => signOut(() => navigate("/"))} id="Opt_Quit_Home" aria-current="page">
+        <ImExit id="icon_Exit_Home" />
+        Sair
+      </button>
       { /* Fim da Navbar */}
 
       <div className="forBlueDiv_Home"></div>  { /* Faixa azul */}
