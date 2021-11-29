@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './login.css'
 
@@ -12,14 +12,38 @@ import cloudLogin1 from '../../images/cloud.png'
 import cloudLogin2 from '../../images/cloud.png'
 import aboutLogin from '../../images/info.png'
 
+import { UserContext } from '../../contexts/user.context'
+import useForm from '../../hooks/useForm'
+
 function Login() {
+  const [{ values }, handleChange, handleSubmit] = useForm();
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [show, setShow] = useState(false)
+  let navigate = useNavigate();
+
+  const { signed, user, signIn, signGuest } = useContext(UserContext);
+
+  console.log(signed);
+  console.log(user);
+
+  function uploadData() {
+    fetch('http://localhost:3333/auth/user', {
+      method: 'POST',
+      body: JSON.stringify(values),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => response.json())
+      .then(data => !!data.message ? alert(data.message) : signIn(data, () => navigate("/home")));
+  }
 
   const handleClick = (evt) => {
-    evt.preventDefault()
-    setShow(!show);
+    evt.preventDefault();
+    uploadData();
+    console.log(values);
+    //signIn(content, () => navigate("/home"));
   }
 
   return (
@@ -36,15 +60,15 @@ function Login() {
 
       <h1 id='loginTitle'>EducaTI</h1>
 
-      <form>
+      <form onSubmit={handleSubmit(handleClick)}>
         <div className='mb-3' id='inputEmailLogin'>
           <MdEmail />
           <input
             type='email'
             placeholder='Endereço de e-mail'
             className='form-control-login'
-            value={email}
-            onChange={e => setEmail(e.target.value)}
+            name="email"
+            onChange={handleChange}
           />
         </div>
 
@@ -54,28 +78,28 @@ function Login() {
             type={show ? 'text' : 'password'}
             placeholder='Senha'
             className='form-control-login'
-            value={password}
-            onChange={e => setPassword(e.target.value)}
+            name="password"
+            onChange={handleChange}
           />
 
           <div className='login-eye'>
             {show ? (
               <IoEyeOutline
                 size={20}
-                onClick={handleClick}
+                onClick={() => setShow(false)}
               />
             ) : (
               <IoEyeOffOutline
                 size={20}
-                onClick={handleClick}
+                onClick={() => setShow(true)}
               />
             )}
           </div>
         </div>
 
-        <button type='submit' className='btn btn-outline-light'>Entrar</button>
+        <button onClick={handleClick} className='btn btn-outline-light'>Entrar</button>
         <Link to="/cadastrar"><button type='submit' className='btn btn-outline-light' id='cadastrar'>Cadastrar</button></Link>
-        <Link to="/home"><button type='submit' className='btn btn-outline-light'>Convidado</button></Link>
+        <button onClick={() => signGuest(() => navigate("/home"))} type='submit' className='btn btn-outline-light'>Convidado</button>
       </form>
 
       <div className='forAbout'>
