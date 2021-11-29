@@ -27,6 +27,14 @@ function Perfil() {
   const { signOut, user } = useContext(UserContext);
   let navigate = useNavigate();
 
+  const formatDate = (date) => {
+    let newDate = new Date(date);
+    let day = newDate.getDate();
+    let month = newDate.getMonth() + 1;
+    let year = newDate.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+
   return (
     <div id="perfil">
       { /* Início da NavBar */}
@@ -87,7 +95,7 @@ function Perfil() {
             <li className="list-group" id="email_Perfil">{ user ? user.email : "Não possui"}</li>
             <div className="separationBar1_data"></div>
             <li className="list-group" id="birthdayTitle_Perfil">Data de Nascimento:</li>
-            <li className="list-group" id="birthday_Perfil">{ user ? user.birth.substring(0,10) : "Não possui"}</li>
+            <li className="list-group" id="birthday_Perfil">{ user ? formatDate(user.birth.substring(0,10)) : "Não possui"}</li>
             <div className="separationBar2_data"></div>
             <li className="list-group" id="TotalStarsTitle_Perfil">Estrelas conquistadas:</li>
             <li className="list-group" id="TotalStars_Data_Perfil">{'\u2B50'}120</li>
