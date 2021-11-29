@@ -10,7 +10,7 @@ const GameRouter = () => {
 
   routes.put("/update/game/:id", ValidationJWT, games.update);
 
-  routes.get("/list/games", ValidationJWT, games.readAll);
+  routes.get("/list/games", games.readAll);
   routes.get("/list/game/:id", ValidationJWT, games.read);
 
   routes.delete("/delete/game/:id", ValidationJWT, games.delete);
