@@ -11,6 +11,7 @@ import Memoria from "./Games/Memory_Game/jogoMemoria"
 import Velha from "./Games/Velha";
 
 import { UserContext } from "../contexts/user.context";
+import JogoMemoria from "./Games/Memory_Game/jogoMemoria"
 
 const Rotas = () => {
   const { signed } = useContext(UserContext);
@@ -23,6 +24,7 @@ const Rotas = () => {
         <Route index path="/home" element={<Home />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/games/velha" element={<Velha />} />
+        <Route path="/games/memoria" element={<JogoMemoria />} />
         <Route path="/" element={<Login />} />
         <Route path="/cadastrar" element={<Cadastro />} />
       </Routes>
@@ -39,6 +41,7 @@ const Rotas = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/games/velha" element={<Velha />} />
+        <Route path="/games/memoria" element={<JogoMemoria />} />
       </Routes>
     )
 

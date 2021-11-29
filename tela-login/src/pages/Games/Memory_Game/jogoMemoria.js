@@ -16,7 +16,7 @@ const cardImg = [
   { src: "../imgs/Face6.jpg", matched: false },
 ];
 
-function App() {
+function JogoMemoria() {
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
   const [stars, setStars] = useState(0);
@@ -109,4 +109,4 @@ function App() {
   );
 }
 
-export default App;
+export default JogoMemoria;
