@@ -20,7 +20,7 @@ function Login() {
   const [show, setShow] = useState(false)
   let navigate = useNavigate();
 
-  const { signed, user, signIn, signGuest } = useContext(UserContext);
+  const { signIn, signGuest } = useContext(UserContext);
 
   function uploadData() {
     fetch('http://localhost:3333/auth/user', {
