@@ -129,15 +129,11 @@ export default class AdminController {
 
       if (!admin)
         return res.status(400).json({ "message": "Admin não encontrado" });
-
-      //if (admin.password !== password)
-      //return res.status(400).json({ "message": "Senha incorreta" });
-
+        
       admin.comparePassword(password, (err: Error, isMatch: boolean) => {
         if (err) {
           throw err;
         } else if (!isMatch) {
-          console.log(isMatch)
           return res.status(400).send({ "message": "Senha incorreta." })
         } else {
           return res.send({

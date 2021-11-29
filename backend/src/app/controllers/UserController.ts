@@ -116,8 +116,6 @@ export default class UserController {
       if (!user)
         return res.status(400).send({ message: "usuario não existe." })
 
-      console.log(res.get("code"));
-
       return res.status(200).send({ message: "Ok" });
     });
   }
