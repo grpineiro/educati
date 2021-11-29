@@ -1,17 +1,22 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './cadastro.css'
 
 import arrow from '../../images/arrow.png'
 
 import useForm from '../../hooks/useForm';
+import { UserContext } from '../../contexts/user.context'
 
 function Cadastro() {
     const [{ values, loading }, handleChange, handleSubmit] = useForm();
+    const { signIn } = useContext(UserContext);
+    const navigate = useNavigate();
 
-    function submitBody() {
+    function submitBody(evt) {
+        // evt.preventDefault();
         console.log(values);
+        uploadData();
     }
 
     function uploadData() {
@@ -23,9 +28,7 @@ function Cadastro() {
             }
         })
             .then(response => response.json())
-            .then(data => {
-                console.log(data);
-            })
+            .then(data => !!data.message ? alert(data.message) : signIn(data, () => navigate("/home")))
     }
 
     return (
@@ -52,11 +55,11 @@ function Cadastro() {
                         </div>
 
                         <div className="col-7">
-                            <input onChange={handleChange} type="password" className="form-control-cadastro" id="confirmPasswordCadastro" placeholder="Confirmar senha" />
+                            <input type="password" className="form-control-cadastro" id="confirmPasswordCadastro" name="test" placeholder="Confirmar senha" />
                         </div>
 
                         <div className="col-7">
-                            <input onChange={handleChange} type="date" className="form-control-cadastro" id="birthdayCadastro" name="date" placeholder='Data de Nascimento' required />
+                            <input onChange={handleChange} type="date" className="form-control-cadastro" id="birthdayCadastro" name="birth" placeholder='Data de Nascimento' required />
                         </div>
                         <button type='submit' className='btnCadastro'>Cadastrar</button>
                     </div>
