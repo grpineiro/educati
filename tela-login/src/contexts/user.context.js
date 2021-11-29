@@ -37,15 +37,8 @@ export default function UserContextProvider({ children }) {
   }
 
   function signGuest(callback) {
-    setUser({
-      first_name: "Convidado",
-      last_name: "Convidado",
-      email: "Não possui",
-      birth: "9999-99-99"
-    })
-
-    localStorage.setItem("@RJSAuth:user", JSON.stringify(user));
-    localStorage.setItem("@RJSAuth:token", "Bearer qualquer coias");
+    setUser(null);
+    localStorage.clear()
 
     callback();
   }
