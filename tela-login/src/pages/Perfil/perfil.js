@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './perfil.css';
@@ -10,6 +10,7 @@ import { ImExit } from 'react-icons/im'
 
 import token_1 from '../../images/token_1.png'
 import edit from '../../images/camera_azul.png'
+import { UserContext } from '../../contexts/user.context';
 
 const EmojiPerfil = props => (  //Função para adicionar Emoji
   <span
@@ -23,6 +24,9 @@ const EmojiPerfil = props => (  //Função para adicionar Emoji
 )
 
 function Perfil() {
+  const { signOut, user } = useContext(UserContext);
+  let navigate = useNavigate();
+
   return (
     <div id="perfil">
       { /* Início da NavBar */}
@@ -34,7 +38,7 @@ function Perfil() {
           <div className="collapse navbar-collapse">
             <img src={token_1} className="navbar-brand" id="Img_Perfil" alt="Imagem perfil" />
             <div className="Area_Name_Points_Perfil">
-              <p id="Name_Perfil">Jorginho</p>
+              <p id="Name_Perfil">{ user ? `${user.first_name}` : "Convidado" }</p>
               <p id="Total_Stars_Perfil">{'\u2B50'}120</p>
             </div>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -51,10 +55,10 @@ function Perfil() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/" className="nav-link active" id="Opt_Quit_Perfil" aria-current="page" href="#">
+                <button onClick={() => signOut(() => navigate("/"))} className="nav-link active" id="Opt_Quit_Perfil" aria-current="page" href="#">
                   <ImExit id="icon_Exit_Perfil" />
                   Sair
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
@@ -70,7 +74,7 @@ function Perfil() {
           <div className="my-6 py-6">
             <img src={token_1} id="Img_Perfil2" alt="Imagem perfil" />
             <a id="Icon_camera" href="#"><img src={edit} id="Icon_edit_Perfil" alt="alterar foto perfil" /></a>
-            <p id="Name_Perfil2">Jorginho</p>
+            <p id="Name_Perfil2">{ user ? `${user.first_name} ${user.last_name}` : "Convidado"}</p>
           </div>
         </div>
         {/* Fim da edição de perfil (lado esquerdo) */}
@@ -80,10 +84,10 @@ function Perfil() {
         <div id="Perfil_Data">
           <ul className="list-group list-group-flush">
             <li className="list-group" id="emailTitle_Perfil">E-mail:</li>
-            <li className="list-group" id="email_Perfil">dominio@email.com</li>
+            <li className="list-group" id="email_Perfil">{ user ? user.email : "Não possui"}</li>
             <div className="separationBar1_data"></div>
             <li className="list-group" id="birthdayTitle_Perfil">Data de Nascimento:</li>
-            <li className="list-group" id="birthday_Perfil">01/01/1998</li>
+            <li className="list-group" id="birthday_Perfil">{ user ? user.birth.substring(0,10) : "Não possui"}</li>
             <div className="separationBar2_data"></div>
             <li className="list-group" id="TotalStarsTitle_Perfil">Estrelas conquistadas:</li>
             <li className="list-group" id="TotalStars_Data_Perfil">{'\u2B50'}120</li>
