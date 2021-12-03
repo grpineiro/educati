@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useContext } from "react"
 import { Link } from 'react-router-dom'
 
 import "./estiloJogo.css"
 import SingleCard from "./components/SingleCard"
+import { UserContext } from "../../../contexts/user.context";
 
 const cardImg = [
   { src: "../imgs/Face1.jpg", matched: false },
@@ -14,12 +15,24 @@ const cardImg = [
 ];
 
 function JogoMemoria() {
+  const { user } = useContext(UserContext);
+
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
   const [stars, setStars] = useState(0);
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
+
+  function uploadStars() {
+    fetch(`http://localhost:3333/update/user/stars/${user._id}`, {
+      method: "PUT",
+      body: JSON.stringify({ stars: stars + user.stars }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+  }
 
   //embaralha as cartas
   const shuffleCards = () => {
@@ -96,7 +109,7 @@ function JogoMemoria() {
             />
           ))}
         </div>
-        <Link to="/home"><button id="btn_retornar">Voltar</button></Link>
+        <Link to="/home" onClick={() => uploadStars()}><button id="btn_retornar">Voltar</button></Link>
         <button id="btn_novo_jogo" onClick={shuffleCards}>Novo Jogo</button>
       </div>
     </div>
