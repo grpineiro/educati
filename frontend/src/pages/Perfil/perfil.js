@@ -36,7 +36,7 @@ function Perfil() {
             <img src={token_1} className="navbar-brand" id="Img_Perfil" alt="Imagem perfil" />
             <div className="Area_Name_Points_Perfil">
               <p id="Name_Perfil">{user ? `${user.first_name}` : "Convidado"}</p>
-              <p id="Total_Stars_Perfil">{'\u2B50'}120</p>
+              <p id="Total_Stars_Perfil">{'\u2B50'}{user ? user.stars : 0}</p>
             </div>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
@@ -87,7 +87,7 @@ function Perfil() {
             <li className="list-group" id="birthday_Perfil">{user ? formatDate(user.birth.substring(0, 10)) : "Não possui"}</li>
             <div className="separationBar2_data"></div>
             <li className="list-group" id="TotalStarsTitle_Perfil">Estrelas conquistadas:</li>
-            <li className="list-group" id="TotalStars_Data_Perfil">{'\u2B50'}120</li>
+            <li className="list-group" id="TotalStars_Data_Perfil">{'\u2B50'}{user ? user.stars : 0}</li>
           </ul>
         </div>
         {/* Fim da visualização de dados (lado direito) */}
