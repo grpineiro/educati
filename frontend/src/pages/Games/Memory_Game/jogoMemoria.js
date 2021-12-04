@@ -15,7 +15,7 @@ const cardImg = [
 ];
 
 function JogoMemoria() {
-  const { user } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
 
   const [cards, setCards] = useState([]);
   const [turns, setTurns] = useState(0);
@@ -24,7 +24,7 @@ function JogoMemoria() {
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
 
-  function uploadStars() {
+  async function uploadStars() {
     fetch(`http://localhost:3333/update/user/stars/${user._id}`, {
       method: "PUT",
       body: JSON.stringify({ stars: stars + user.stars }),
@@ -32,6 +32,10 @@ function JogoMemoria() {
         "Content-Type": "application/json",
       },
     })
+
+    setUser({...user, stars: stars + user.stars});
+    localStorage.setItem("@RJSAuth:user", JSON.stringify({...user, stars: stars + user.stars}));
+
   }
 
   //embaralha as cartas
@@ -109,7 +113,7 @@ function JogoMemoria() {
             />
           ))}
         </div>
-        <Link to="/home" onClick={() => uploadStars()}><button id="btn_retornar">Voltar</button></Link>
+        <Link to="/home" onClick={() => user && !!turns && !!stars ? uploadStars() : console.log("Nada")}><button id="btn_retornar">Voltar</button></Link>
         <button id="btn_novo_jogo" onClick={shuffleCards}>Novo Jogo</button>
       </div>
     </div>
