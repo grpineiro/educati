@@ -12,7 +12,7 @@ export default function UserContextProvider({ children }) {
       const storageToken = localStorage.getItem("@RJSAuth:token");
 
       if (storageUser && storageToken) {
-        setUser(JSON.parse((storageUser)))
+        setUser(JSON.parse(storageUser))
       }
     }
 
@@ -44,7 +44,7 @@ export default function UserContextProvider({ children }) {
   }
 
   return (
-    <UserContext.Provider value={{ signed: !!user, user, signIn, signOut, signGuest }}>
+    <UserContext.Provider value={{ signed: !!user, user, signIn, signOut, signGuest, setUser }}>
       {children}
     </UserContext.Provider>
   )
