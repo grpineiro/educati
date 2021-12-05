@@ -1,6 +1,4 @@
 #conteiner_global_jogo_forca {
-  margin: -8px;
-  padding: 0px;
   background-color: #111827;
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -15,6 +13,12 @@
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
+}
+
+#div_header {
+  width: 100%;
+  position: absolute;
+  color: #ffffff;
 }
 
 button#btn_regras, button#btn_play_again {
@@ -39,12 +43,15 @@ h1#title_hangman {
 }
 
 #game-container {
-  padding: 0px;
+  padding-top: 50px;
+  top: 44px;
+  left: -66px;
   position: relative;
   margin: auto;
   height: 350px;
-  width: 450px;
+  width: 500px;
 }
+
 
 #figure-container {
   fill: transparent;
@@ -59,11 +66,11 @@ h1#title_hangman {
 
 #wrong-letters-container {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 65px;
+  right: -10px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -84,8 +91,8 @@ h1#title_hangman {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  bottom: 10px;
-  left: 50%;
+  top: 330px;
+  left: 320px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -114,7 +121,6 @@ h1#title_hangman {
   bottom: 0;
   left: 0;
   right: 0;
-  /* display: flex; */
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -143,13 +149,19 @@ h1#title_hangman {
   font-size: 16px;
 }
 
-button#btn_voltar_home:hover {
-  background-color: #fff;
-  color: black;
+button#btn_voltar_home {
+  background: #2563eb;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-bottom: 16px;
+  border: none;
+  color: #ffffff;
   font-size: 16px;
-  margin-top: 20px;
-  padding: 12px 20px;
-  box-shadow: 0px 1px 50px #ff1e00e0;
+}
+
+button#btn_voltar_home:hover {
+  background: #ff1e00e0;
+  box-shadow: 0px 1px 30px #ff1e00e0;
 }
 
 #popup-container #popup button#btn_play_again:hover {
@@ -165,26 +177,26 @@ button#btn_voltar_home:hover {
   outline: none;
 }
 
-#notification-container {
+.notification-container {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px 10px 0 0;
   margin: 15px;
   position: relative;
   bottom: 10px;
   width: 260px;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   visibility: hidden;
 }
 
-#notification-container p#notification_p {
+.notification-container p#notification_p {
   margin: 0;
 }
 
-#notification-container #show {
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
+.notification-container.show {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
           visibility: visible;
 }
 /*# sourceMappingURL=App.css.map */
