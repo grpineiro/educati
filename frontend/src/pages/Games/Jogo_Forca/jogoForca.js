@@ -87,6 +87,7 @@ function App() {
   const [playable, setPlayable] = useState(true);
   const [correctLetters, setCorrectLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
+  const [conqueredStars, setConqueredStars] = useState([]);
   const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
@@ -125,6 +126,10 @@ function App() {
     selectedWord = words[random];
   }
 
+  function calcStars() {
+    conqueredStars = words.length;
+  }
+
   return (
     <>
       <Header />
@@ -134,7 +139,7 @@ function App() {
         <WrongLetters wrongLetters={wrongLetters} />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
       </div>
-      <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} playAgain={playAgain} />
+      <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} conqueredStars={conqueredStars} selectedWord={selectedWord} setPlayable={setPlayable} playAgain={playAgain} />
       <Notification showNotification={showNotification} />
       <Link to="/home"><button id="btn_voltar_home">Voltar</button></Link>
       </div>

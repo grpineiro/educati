@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import { checkWin } from "./Helpers";
 
-const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAgain }) => {
+const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAgain, conqueredStars }) => {
   let finalMessage = "";
   let finalMessageRevealWord = "";
   let playable = true;
 
   if (checkWin(correctLetters, wrongLetters, selectedWord) === "win") {
     finalMessage = "Parabéns! Você conseguiu! 😃";
+    finalMessageRevealWord = `Estrelas conquistadas: ⭐ ${conqueredStars}`;
     playable = false;
   } else if (checkWin(correctLetters, wrongLetters, selectedWord) === "lose") {
     finalMessage = "Infelizmente você perdeu. 😕";

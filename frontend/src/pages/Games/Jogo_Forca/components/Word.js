@@ -1,6 +1,6 @@
 import React from "react";
 
-const Word = ({ selectedWord, correctLetters }) => {
+const Word = ({ selectedWord, correctLetters, conqueredStars }) => {
   return (
     <div id="word">
       {selectedWord.split("").map((letter, i) => {

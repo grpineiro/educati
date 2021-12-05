@@ -1,6 +1,7 @@
 import React from "react";
 
-const WrongLetters = ({ wrongLetters }) => {
+const WrongLetters = ({ wrongLetters, conqueredStars }) => {
+  
   return (
     <div id="wrong-letters-container">
       
