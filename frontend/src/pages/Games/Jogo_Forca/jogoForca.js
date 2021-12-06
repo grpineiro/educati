@@ -6,6 +6,7 @@ import Word from "./components/Word";
 import Popup from "./components/Popup";
 import Notification from "./components/Notification";
 import { showNotification as show } from "./components/Helpers";
+import stars from "./components/Stars";
 
 import { Link } from 'react-router-dom'
 import "./estiloForca.css";
@@ -152,7 +153,7 @@ function App() {
         <WrongLetters wrongLetters={wrongLetters} />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
       </div>
-      <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} playAgain={playAgain} />
+      <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} conqueredStars={stars({ wrongLetters, selectedWord })} selectedWord={selectedWord} setPlayable={setPlayable} playAgain={playAgain} />
       <Notification showNotification={showNotification} />
       <Link to="/home"><button id="btn_voltar_home">Voltar</button></Link>
       </div>
