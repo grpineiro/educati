@@ -56,15 +56,15 @@ const words = [
   "cágado",
   "javali",
   "jararaca",
-  "Coala",
+  "coala",
   "mamute",
   "marmota",
   "marreco",
   "mico",
   "morcego",
   "morsa",
-  "onça",
-  "ouriço",
+  "tigre",
+  "tartaruga",
   "ovelha",
   "panda",
   "papagaio",
@@ -73,13 +73,14 @@ const words = [
   "pavão",
   "pinguim",
   "polvo",
-  "preguiça",
+  "ornitorrinco",
   "rã",
   "rato",
   "sabiá",
   "sapo",
   "suricate",
   "tamanduá",
+  "leopardo",
 ];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
@@ -87,7 +88,6 @@ function App() {
   const [playable, setPlayable] = useState(true);
   const [correctLetters, setCorrectLetters] = useState([]);
   const [wrongLetters, setWrongLetters] = useState([]);
-  const [conqueredStars, setConqueredStars] = useState([]);
   const [showNotification, setShowNotification] = useState(false);
 
   useEffect(() => {
@@ -126,9 +126,22 @@ function App() {
     selectedWord = words[random];
   }
 
-  function calcStars() {
-    conqueredStars = words.length;
-  }
+  /*const stars = ({ wrongLetters, selectedWord }) => {
+    let stars = 0;
+
+    if (selectedWord.length === 2 && wrongLetters.length >= 2){
+        stars = 1;
+    } else { if(selectedWord.length === 4 && wrongLetters.length >= 4){
+        stars = 1;
+    }else{
+        stars = selectedWord.length - wrongLetters.length;
+    }}
+    
+    return stars;
+
+  }; */
+
+  
 
   return (
     <>
@@ -139,7 +152,7 @@ function App() {
         <WrongLetters wrongLetters={wrongLetters} />
         <Word selectedWord={selectedWord} correctLetters={correctLetters} />
       </div>
-      <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} conqueredStars={conqueredStars} selectedWord={selectedWord} setPlayable={setPlayable} playAgain={playAgain} />
+      <Popup correctLetters={correctLetters} wrongLetters={wrongLetters} selectedWord={selectedWord} setPlayable={setPlayable} playAgain={playAgain} />
       <Notification showNotification={showNotification} />
       <Link to="/home"><button id="btn_voltar_home">Voltar</button></Link>
       </div>

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { checkWin } from "./Helpers";
 
-const Popup = ({ correctLetters, wrongLetters, selectedWord, setPlayable, playAgain, conqueredStars }) => {
+const Popup = ({ correctLetters, wrongLetters, conqueredStars, selectedWord, setPlayable, playAgain }) => {
   let finalMessage = "";
   let finalMessageRevealWord = "";
   let playable = true;
