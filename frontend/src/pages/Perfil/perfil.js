@@ -18,8 +18,8 @@ function Perfil() {
 
   const formatDate = (date) => {
     let newDate = new Date(date);
-    let day = newDate.getDate();
-    let month = newDate.getMonth() + 1;
+    let day = (newDate.getDate()+1).toString().padStart(2, '0')
+    let month = (newDate.getMonth()+1).toString().padStart(2, '0')
     let year = newDate.getFullYear();
     return `${day}/${month}/${year}`;
   }
