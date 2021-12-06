@@ -100,7 +100,7 @@ function Home() {
                     role="img" aria-label="Placeholder: Jogo da Memória" preserveAspectRatio="xMidYMid slice" focusable="false">
                     <title>Jogo da Forca</title>
                     <rect width="100%" height="100%" fill="transparent" />
-                    <text id="text_q3" x="40%" y="50%" fill="#eceeef" dy=".3em">Jogo da Forca</text>
+                    <text id="text_q3" x="30%" y="50%" dy=".3em">Jogo da Forca</text>
                   </svg>
                 </Link>
               </div>
