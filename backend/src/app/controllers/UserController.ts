@@ -120,6 +120,21 @@ export default class UserController {
     });
   }
 
+  public updateGameStars(req: Request, res: Response) {
+    const { id } = req.params;
+    const { stars } = req.body;
+
+    UserEntity.findByIdAndUpdate(id, { stars }, (err: any, user: any) => {
+      if (err)
+        return res.status(400).json(err);
+      
+      if (!user)
+        return res.status(400).send({ message: "usuario não existe." });
+
+      return res.status(204);
+    });
+  }
+
   public async deleteUser(req: Request, res: Response) {
     const { id } = req.params;
 

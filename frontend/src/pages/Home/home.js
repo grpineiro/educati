@@ -38,7 +38,7 @@ function Home() {
             <img src={token_1} className="navbar-brand" id="Img_User_Home" alt="Imagem Usuário" />
             <div className="Area_Name_Points_User_Home">
               <p id="Name_User_Home">{!!user ? `${user.first_name}` : "Convidado"}</p>
-              <p id="Total_Stars_User_Home">{'\u2B50'}120</p>
+              <p id="Total_Stars_User_Home">{'\u2B50'}{user ? user.stars : 0}</p>
             </div>
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">

@@ -14,6 +14,7 @@ const UserRoutes = () => {
   routes.post("/auth/user", userController.loginUser);
 
   routes.put("/update/user/:id", ValidationJWT, userController.updateUser);
+  routes.put("/update/user/stars/:id", userController.updateGameStars);
 
   routes.delete("/delete/user/:id", ValidationJWT, userController.deleteUser);
 

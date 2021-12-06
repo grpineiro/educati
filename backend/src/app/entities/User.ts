@@ -9,6 +9,7 @@ export interface User {
   email: string;
   password: string;
   birth: Date;
+  stars: number;
 };
 
 const schema = new Schema<User>({
@@ -16,7 +17,8 @@ const schema = new Schema<User>({
   last_name: { type: String, required: true, maxlength: 100 },
   email: { type: String, required: true, unique: true, },
   password: { type: String, required: true },
-  birth: { type: Date, required: true, max: new Date() }
+  birth: { type: Date, required: true, max: new Date() },
+  stars: { type: Number, required: true, default: 0 } 
 });
 
 schema.pre('save', function(next) {
