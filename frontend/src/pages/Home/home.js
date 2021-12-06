@@ -74,7 +74,7 @@ function Home() {
                 <Link to="/games/velha">
                   <svg className="bd-placeholder-img card-img-top" id="quadrante1" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
                     role="img" aria-label="Placeholder: Jogo da Velha" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>#GAME1</title>
+                    <title>Jogo da Velha</title>
                     <rect width="100%" height="100%" fill="transparent" />
                     <text id="text_q1" x="35%" y="50%" dy=".3em">Jogo da Velha</text>
                   </svg>
@@ -86,7 +86,7 @@ function Home() {
                 <Link to="/games/memoria">
                   <svg className="bd-placeholder-img card-img-top" id="quadrante2" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
                     role="img" aria-label="Placeholder: Jogo da Memória" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <title>#GAME2</title>
+                    <title>Jogo da Memória</title>
                     <rect width="100%" height="100%" fill="transparent" />
                     <text id="text_q2" x="30%" y="50%" dy=".3em">Jogo da Memória</text>
                   </svg>
@@ -95,12 +95,14 @@ function Home() {
             </div>
             <div className="col">
               <div className="card shadow-sm">
-                <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
-                  role="img" aria-label="Placeholder: Game3" preserveAspectRatio="xMidYMid slice" focusable="false">
-                  <title>#GAME3</title>
-                  <rect width="100%" height="100%" fill="#55595c" />
-                  <text x="40%" y="50%" fill="#eceeef" dy=".3em">#GAME3</text>
-                </svg>
+                <Link to="/games/forca">
+                  <svg className="bd-placeholder-img card-img-top" id="quadrante3" width="100%" height="225" xmlns="http://www.w3.org/2000/svg"
+                    role="img" aria-label="Placeholder: Jogo da Memória" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Jogo da Forca</title>
+                    <rect width="100%" height="100%" fill="transparent" />
+                    <text x="40%" y="50%" fill="#eceeef" dy=".3em">Jogo da Forca</text>
+                  </svg>
+                </Link>
               </div>
             </div>
             <div className="col">
