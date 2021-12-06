@@ -8,6 +8,7 @@ import Perfil from "./Perfil/perfil"
 import Home from "./Home/home"
 
 import Velha from "./Games/Velha";
+import Forca from "./Games/Jogo_Forca/jogoForca";
 import JogoMemoria from "./Games/Memory_Game/jogoMemoria"
 
 import { UserContext } from "../contexts/user.context";
@@ -23,6 +24,7 @@ const Rotas = () => {
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/games/velha" element={<Velha />} />
         <Route path="/games/memoria" element={<JogoMemoria />} />
+        <Route path="/games/forca" element={<Forca />} />
         <Route path="/" element={<Login />} />
         <Route path="/cadastrar" element={<Cadastro />} />
       </Routes>
@@ -38,6 +40,7 @@ const Rotas = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/perfil" element={<Perfil />} />
         <Route path="/games/velha" element={<Velha />} />
+        <Route path="/games/forca" element={<Forca />} />
         <Route path="/games/memoria" element={<JogoMemoria />} />
       </Routes>
     )
