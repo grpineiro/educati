@@ -4,7 +4,7 @@ An educational game platform for children.
 ## About this project
 We are a development team formed by 5 friends who met at the university, in the Computer Science course. We united with a common goal: to foster education and learning for children and young people, bringing a more dynamic and interesting way to learn through digital games.
 
-Based on this, our main mission is to use this tool to instigate and develop skills such as attention, imagination, concentration and logical reasoning, in addition to stimulating motor skills, also enabling the return of pleasure when acquiring knowledge.
+Based on this, our main mission is to use this tool to instigate and develop skills such as attention, imagination, concentration and logical reasoning, in addition to stimulating motor skills, allowing the acquisition of knowledge.
 
 ## Installation
 ### Requirements
